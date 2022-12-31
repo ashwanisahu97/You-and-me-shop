@@ -24,7 +24,7 @@ const Electronics = () => {
   return (
     <Flex w={ "100%"} gap={ "5%"} position={"relative"} top={ "100px"}  flexWrap={"wrap"}>
       {
-        loading ? <h1>Data is loading</h1> : error ? <h1>Something went wrong,try again</h1> :
+        loading ? <Text color="red" m={ "auto"}>Data is loading</Text> : error ?<Text color="red" m={ "auto"}>Something went wrong,please try again</Text> :
           electronicsData?.map((element) => { 
             return (
               <Box boxShadow={"rgba(100, 100, 111, 0.2) 0px 7px 29px 0px"} key={element.id} w={"20%"} mb={"15px"} borderRadius={ "10px"}>
