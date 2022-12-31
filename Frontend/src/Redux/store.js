@@ -1,4 +1,4 @@
 import { applyMiddleware, legacy_createStore } from "redux";
-import thunk from "redux-thunk"
+// import thunk from "redux-thunk"
 import { reducer } from "./App/reducer";
-export const store = legacy_createStore(reducer,applyMiddleware(thunk))
+export const store = legacy_createStore(reducer,window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__())
