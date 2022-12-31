@@ -22,12 +22,12 @@ const Electronics = () => {
   },[products.length])
   
   return (
-    <Flex w={ "100%"} gap={ "5%"} position={"relative"} top={ "100px"} border={"4px solid red"} flexWrap={"wrap"}>
+    <Flex w={ "100%"} gap={ "5%"} position={"relative"} top={ "100px"}  flexWrap={"wrap"}>
       {
         loading ? <h1>Data is loading</h1> : error ? <h1>Something went wrong,try again</h1> :
           electronicsData?.map((element) => { 
             return (
-              <Box key={element.id} w={ "20%"}>
+              <Box boxShadow={"rgba(100, 100, 111, 0.2) 0px 7px 29px 0px"} key={element.id} w={"20%"} mb={"15px"} borderRadius={ "10px"}>
                 <Box h={ "250px"}><Image w={"100%"} h={ "100%"} src={element.image}></Image></Box>
                 <Box>
                 <Text>{element.title }</Text>

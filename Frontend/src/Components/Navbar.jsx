@@ -1,7 +1,7 @@
 import { Box, Flex, Image, Input } from '@chakra-ui/react'
 import React from 'react'
 import { Link } from 'react-router-dom'
-
+import {AiOutlineSearch } from "react-icons/ai"
 const Navbar = () => {
   return (
       <Flex position="fixed" zIndex={"1"} gap="30px" alignItems={"center"} bg="#f7f8f7" w={"100%"}>
@@ -10,11 +10,14 @@ const Navbar = () => {
           <Box><Link to="/women">Women</Link></Box>
           <Box><Link to="/electronics">Electronics</Link></Box>
           <Box><Link to="/jewelery">Jewelery</Link></Box>
-          <Box>
-              <Input type={"text"} placeholder="What are you looking for"></Input>
-          </Box>
+      <Flex alignItems={"center"}>
+        <Box position={"relative"} left={ "30px"}><AiOutlineSearch size={ "30px"} /></Box>
+        <Input pl={ "30px"} type={"text"} placeholder={`What are you looking for`} w={ "300px"}></Input>
+      </Flex>
+      <Flex gap={ "5"} position={"absolute"} right={ "50px"}>
           <Box><Link to="/login">Login</Link></Box>
-          <Box><Link to="/signup">Signup</Link></Box>
+        <Box><Link to="/signup">Signup</Link></Box>
+      </Flex>
    </Flex>
   )
 }
