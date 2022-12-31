@@ -3,10 +3,10 @@ import React, { useEffect } from 'react'
 import { useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 
-const Men = () => {
+const Electronics = () => {
   // const dispatch = useDispatch();
-  const [womens,setwomens]=useState([])
-  const [womensData,setwomensData]=useState([])
+  const [electronics,setelectronics]=useState([])
+  const [electronicsData,setelectronicsData]=useState([])
   const loading=useSelector((store)=>store.loading)
   const products=useSelector((store)=>store.data)
   const error=useSelector((store)=>store.error)
@@ -15,26 +15,26 @@ const Men = () => {
   }, [])
 
   useEffect(() => { 
-    const womensWear = womensData?.filter((element) => { 
-      return element.category == "womens";
+    const electronicsWear = electronicsData?.filter((element) => { 
+      return element.category == "electronics";
     })
-    console.log("womensWear",womensWear)
-    setwomens(womensWear)
-  },[womensData.length])
+    console.log("electronicsWear",electronicsWear)
+    setelectronics(electronicsWear)
+  },[electronicsData.length])
   const fetchData = async () => {  
     const response = await fetch(`http://localhost:8080/products`)
     let res = await response.json();
     console.log(response);
     console.log(res);
-    setwomensData(res)
+    setelectronicsData(res)
   }
-  console.log("womens",womens);
+  console.log("electronics",electronics);
   console.log("products",products);
   return (
     <Flex w={ "100%"} gap={ "5%"} position={"relative"} top={ "100px"} border={"4px solid red"} flexWrap={"wrap"}>
       {
         loading ? <h1>Data is loading</h1> : error ? <h1>Something went wrong,try again</h1> :
-          womens?.map((element) => { 
+          electronics?.map((element) => { 
             return (
               <Box key={element.id} w={ "20%"}>
                 <Box h={ "250px"}><Image w={"100%"} h={ "100%"} src={element.image}></Image></Box>
@@ -51,4 +51,4 @@ const Men = () => {
   
 }
 
-export default Men
+export default Electronics
