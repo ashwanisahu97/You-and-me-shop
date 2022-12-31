@@ -1,3 +1,4 @@
+import { Box, Image,Text,Flex } from '@chakra-ui/react';
 import React, { useEffect } from 'react'
 import { useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
@@ -21,16 +22,22 @@ const Homepage = () => {
   }
   console.log(data);
   return (
-    <div>
+    <Flex w={ "100%"} gap={ "5%"} position={"relative"} top={ "100px"} border={"4px solid red"} flexWrap={"wrap"}>
       {
         loading ? <h1>Data is loading</h1> : error ? <h1>Something went wrong,try again</h1> :
           data?.map((element) => { 
             return (
-              <div key={ element.id}>{element.title }</div>
+              <Box key={element.id} w={ "20%"}>
+                <Box h={ "250px"}><Image w={"100%"} h={ "100%"} src={element.image}></Image></Box>
+                <Box>
+                <Text>{element.title }</Text>
+                <Text>{element.price }</Text>
+                </Box>
+              </Box>
             )
           })
       }
-    </div>
+    </Flex>
   )
 }
 
