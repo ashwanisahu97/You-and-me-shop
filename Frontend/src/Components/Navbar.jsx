@@ -19,8 +19,8 @@ const Navbar = () => {
       <Flex alignItems={"center"} gap={ "5"} position={"absolute"} right={ "50px"}>
           <Box><Link to="/login">Login</Link></Box>
         <Box><Link to="/signup">Signup</Link></Box>
-        <Box><BsCartFill/></Box>
-        <Box><AiOutlineHeart/></Box>
+        <Box><Link to="/cart"><BsCartFill/></Link></Box>
+        <Box><Link to="/wishlist"><AiOutlineHeart/></Link></Box>
       </Flex>
    </Flex>
   )

@@ -3,9 +3,11 @@ import React, { useEffect } from 'react'
 import { useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { fetchData } from '../Redux/App/action';
+import { useNavigate } from 'react-router-dom';
 
 const Homepage = () => {
   const dispatch = useDispatch();
+  const navigate=useNavigate()
   const loading=useSelector((store)=>store.loading)
   const products=useSelector((store)=>store.data)
   const error=useSelector((store)=>store.error)
@@ -26,7 +28,7 @@ const Homepage = () => {
                 <Text>${element.price }</Text>
                 </Box>
                <Box>
-                  <Button _hover={{backgroundColor:"blue",color:"white"}} w={ "100%"} bg={ "red"}>Add to cart</Button>
+                  <Button onClick={() => { navigate(`/productDetails/${element.id}`)}} _hover={{backgroundColor:"blue",color:"white"}} w={ "100%"} bg={ "red"}>See more details</Button>
              </Box>
               </Box>
             )

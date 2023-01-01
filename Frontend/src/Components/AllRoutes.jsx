@@ -7,6 +7,9 @@ import Login from '../Pages/Login'
 import Homepage from '../Pages/Homepage'
 import Electronics from '../Pages/Electronics'
 import Jewelery from '../Pages/Jewelery'
+import Cart from '../Pages/Cart'
+import Wishlist from '../Pages/Wishlist'
+import ProductDetails from '../Pages/ProductDetails'
 
 const AllRoutes = () => {
   return (
@@ -16,8 +19,11 @@ const AllRoutes = () => {
           <Route path="/women" element={ <Women/>}></Route>
           <Route path="/electronics" element={ <Electronics/>}></Route>
           <Route path="/jewelery" element={ <Jewelery/>}></Route>
+          <Route path="/productDetails/:id" element={ <ProductDetails/>}></Route>
           <Route path="/login" element={ <Login/>}></Route>
           <Route path="/signup" element={ <Signup/>}></Route>
+          <Route path="/cart" element={ <Cart/>}></Route>
+          <Route path="/wishlist" element={ <Wishlist/>}></Route>
    </Routes>
   )
 }
