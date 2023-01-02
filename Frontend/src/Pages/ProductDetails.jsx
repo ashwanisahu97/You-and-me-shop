@@ -27,7 +27,7 @@ const ProductDetails = () => {
         <Image w={"100%"} src={ singleProduct?.image}></Image>
  </Box>
       <Box>
-        <VStack border={"1px solid green"} w={ "500px"}>
+        <VStack justifyContent={"flex-start"} border={"1px solid green"} w={ "500px"}>
           <Box>
             <Text>{singleProduct?.title}</Text>
           </Box>
