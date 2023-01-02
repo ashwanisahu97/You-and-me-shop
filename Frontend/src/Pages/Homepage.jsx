@@ -1,6 +1,5 @@
 import { Box, Image,Text,Flex, Button } from '@chakra-ui/react';
 import React, { useEffect } from 'react'
-import { useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { fetchData } from '../Redux/App/action';
 import { useNavigate } from 'react-router-dom';
@@ -12,9 +11,12 @@ const Homepage = () => {
   const products=useSelector((store)=>store.data)
   const error=useSelector((store)=>store.error)
   useEffect(() => { 
-    dispatch(fetchData())
-  }, [])
-  
+    if (products?.length == 0) { 
+      console.log("fetching data")
+      dispatch(fetchData())
+     }
+  }, [dispatch,products?.length])
+  console.log("products1",products)
   return (
     <Flex w={ "100%"} gap={ "5%"} position={"relative"} top={ "100px"}  flexWrap={"wrap"}>
       {
