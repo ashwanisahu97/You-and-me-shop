@@ -2,13 +2,13 @@ import { Box, Image,Text,Flex } from '@chakra-ui/react';
 import React, { useEffect } from 'react'
 import { useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { fetchData } from '../Redux/App/action';
+import { fetchData } from '../Redux/Product/action';
 const Electronics = () => {
   const dispatch = useDispatch();
   const [electronicsData,setelectronicsData]=useState([])
-  const loading=useSelector((store)=>store.loading)
-  const products=useSelector((store)=>store.data)
-  const error=useSelector((store)=>store.error)
+  const loading=useSelector((store)=>store.product.loading)
+  const products=useSelector((store)=>store.product.data)
+  const error=useSelector((store)=>store.product.error)
   useEffect(() => { 
     dispatch(fetchData())
   }, [])

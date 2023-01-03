@@ -1,7 +1,7 @@
 import * as Types from "./actionType"
 const initState = {
 loading:false,
-    cart: [],
+cart: [],
 error:false
 }
 const reducer = (state = initState, { type,payload}) => { 
@@ -9,8 +9,22 @@ const reducer = (state = initState, { type,payload}) => {
         case Types.GET_FROM_CART_REQUEST:
             return {
                 ...state,
-                loading
-                cart:[...cart,payload]
+                loading:true
             }
+        case Types.GET_FROM_CART_SUCCESS:
+            return {
+                ...state,
+                loading: false,
+                cart:[...state.cart,payload]
+            }
+        case Types.GET_FROM_CART_FAILURE:
+            return {
+                ...state,
+                loading: false,
+                error:true
+            }
+        default:
+            return state;
     }
 }
+export { reducer}

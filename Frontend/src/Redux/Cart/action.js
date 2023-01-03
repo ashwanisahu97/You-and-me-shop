@@ -1,44 +1,55 @@
 import * as Types from "./actionType";
 import axios from "axios"
-export const AddToCartRequest = () => { 
+export const addToCartRequest = () => { 
     return {
         type:Types.ADD_TO_CART_REQUEST
     }
 }
-export const AddToCartSuccess = () => { 
+export const addToCartSuccess = () => { 
     return {
         type: Types.ADD_TO_CART_SUCCESS,
     }
 }
-export const AddToCartFailure = () => { 
+export const addToCartFailure = () => { 
     return {
-        type: Types.GET_FROM_CART_REQUEST
+        type: Types.ADD_TO_CART_FAILURE
     }
 }
-export const GetFromCartRequest = () => { 
+export const getFromCartRequest = () => { 
     return {
         type:Types.GET_FROM_CART_REQUEST
     }
 }
-export const GetFromCartSuccess = (payload) => { 
+export const getFromCartSuccess = (payload) => { 
     return {
         type: Types.GET_FROM_CART_SUCCESS,
         payload
     }
 }
-export const GetFromCartFailure = () => { 
+export const getFromCartFailure = () => { 
     return {
         type: Types.GET_FROM_CART_FAILURE
     }
 }
 
 export const getFromCart = () => (dispatch) => { 
-        dispatch(GetFromCartRequest());
+        dispatch(getFromCartRequest());
     axios.post("http://localhost:8080/cart").then(({ data}) => { 
         console.log("data", data)
-        GetFromCartSuccess(data)
+        getFromCartSuccess(data)
     }).catch(() => { 
-        dispatch(GetFromCartFailure())
+        dispatch(getFromCartFailure())
+    })
+     
+}
+export const addToCart = (prod) => (dispatch) => { 
+        dispatch(addToCartRequest());
+    axios.post("http://localhost:8080/cart",prod).then(({ data}) => { 
+        console.log("data", data)
+        alert("hello data is saved");
+        addToCartSuccess(data)
+    }).catch(() => { 
+        dispatch(addToCartFailure())
     })
      
 }

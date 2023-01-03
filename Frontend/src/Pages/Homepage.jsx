@@ -1,15 +1,15 @@
 import { Box, Image,Text,Flex, Button, Grid } from '@chakra-ui/react';
 import React, { useEffect } from 'react'
 import { useDispatch, useSelector } from 'react-redux';
-import { fetchData } from '../Redux/App/action';
+import { fetchData } from '../Redux/Product/action';
 import { useNavigate } from 'react-router-dom';
 
 const Homepage = () => {
   const dispatch = useDispatch();
   const navigate=useNavigate()
-  const loading=useSelector((store)=>store.loading)
-  const products=useSelector((store)=>store.data)
-  const error=useSelector((store)=>store.error)
+  const loading=useSelector((store)=>store.product.loading)
+  const products=useSelector((store)=>store.product.data)
+  const error=useSelector((store)=>store.product.error)
   useEffect(() => { 
     if (products?.length == 0) { 
       console.log("fetching data")

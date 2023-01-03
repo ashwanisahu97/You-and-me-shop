@@ -3,13 +3,15 @@ import React from 'react'
 import { useState } from 'react';
 import { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { useParams} from "react-router-dom"
-import { fetchData } from '../Redux/App/action';
+import { useNavigate, useParams} from "react-router-dom"
+import { fetchData } from '../Redux/Product/action';
+import { addToCart, getFromCart } from '../Redux/Cart/action';
 const ProductDetails = () => {
   const dispatch = useDispatch();
+  const navigate = useNavigate();
   const { id } = useParams();
     const [singleProduct, setSingleProduct] = useState({})
-  const products = useSelector((store) => store.data)
+  const products = useSelector((store) =>store.product.data)
   useEffect(() => { 
     if (products?.length === 0) { 
 
@@ -19,7 +21,10 @@ const ProductDetails = () => {
     useEffect(() => { 
         const singleProd = products.find((e) => e.id == id)
         setSingleProduct(singleProd)
-    }, [id,products?.length])
+    }, [id, products?.length])
+  const handleAddToCart = (prod) => { 
+  dispatch(addToCart(prod))
+  }
     console.log("single product", singleProduct);
   return (
     <HStack border={"1px solid red"} w={ "60%"}  m={"auto"} position={"relative"} top={ "100px"}>
@@ -38,7 +43,10 @@ const ProductDetails = () => {
             <Text>{singleProduct?.price}</Text>
           </Box>
           <Box w={"100%"} border={"1px solid red"}>
-            <Button w={"100%"}>Add to cart</Button>
+            <Button onClick={() => { 
+              handleAddToCart(singleProduct);
+              navigate("/cart")
+            }} w={"100%"}>Add to cart</Button>
           </Box>
         </VStack>
  </Box>
