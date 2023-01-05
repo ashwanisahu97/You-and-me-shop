@@ -1,4 +1,4 @@
-import { Box, Button, Checkbox, Flex, FormControl, FormLabel, HStack, Heading, Input, Text, VStack } from '@chakra-ui/react'
+import { Box, Button, Checkbox, Flex, FormControl, FormLabel, HStack, Heading, Input, Link, Text, VStack } from '@chakra-ui/react'
 import React from 'react'
 
 const Signup = () => {
@@ -8,7 +8,7 @@ const Signup = () => {
         <Heading  mb="20px" textAlign={"center"}> Create your account</Heading>
    
       <Flex flexDirection={"column"}>
-        <FormControl>
+        <FormControl isRequired>
           <FormLabel>First Name</FormLabel>
           <Input type="email" isRequired></Input>
           <FormLabel mt="10px">Last Name</FormLabel>
@@ -19,8 +19,8 @@ const Signup = () => {
           <Input type="password" isRequired></Input>
           </FormControl>
           <Flex mt="10px" justifyContent={"space-between"}>
-          <Checkbox defaultChecked>Remember me</Checkbox>
-             <Button>Forgot your password?</Button>
+          <Text>Already have an account?</Text>
+             <Text>Please <Link textDecoration={"underline"}> Login </Link>here</Text>
           </Flex>
           <Button  mt="20px" type={ "submit"}
                   bg={'blue.400'}
