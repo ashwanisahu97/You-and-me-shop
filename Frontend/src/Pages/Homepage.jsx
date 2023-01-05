@@ -26,10 +26,15 @@ const Homepage = () => {
               <Box onClick={() => {
                 navigate(`/productDetails/${element.id}`)
               }} key={element.id} boxShadow={"rgba(100, 100, 111, 0.2) 0px 7px 29px 0px"} mb={"15px"} borderRadius={"10px"}>
-                <Box h={ "300px"}><Image w={"100%"} h={ "100%"} src={element.image}></Image></Box>
+                <Box h={ "300px"}><Image w={"90%"} h={ "100%"} src={element.image}></Image></Box>
                 <Box fontSize={ "lg"} p={ "10px"} h={"150px"}>
-                <Text>{element.title }</Text>
-                <Text>${element.price }</Text>
+                  <Text fontSize="lg">{element.title}</Text>
+                  <Flex gap={ 10}>
+                    <Text>${element.price}</Text>
+                    <Text textDecoration={'line-through'} color={'gray.600'}>
+                $199
+              </Text>
+                  </Flex>
                 </Box>
                {/* <Box>
                   <Button onClick={() => { navigate(`/productDetails/${element.id}`)}} _hover={{backgroundColor:"blue",color:"white"}} w={ "100%"} bg={ "red"}>See more details</Button>

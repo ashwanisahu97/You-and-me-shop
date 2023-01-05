@@ -3,9 +3,9 @@ import React from 'react'
 
 const Login = () => {
   return (
-    <Box border={"1px solid red"} borderRadius="10px" w={["full", "md"]} mx={"auto"} position="relative" top={'150px'} >
+    <Box border={"1px solid red"} borderRadius="10px" w={["full", "md"]} mx={"auto"} position="relative" top={'150px'} p={"10px"} >
  
-        <Heading textAlign={"center"}>Login Form</Heading>
+        <Heading  mb="20px" textAlign={"center"}> Login to your account</Heading>
    
       <Flex flexDirection={"column"}>
         <FormControl>
@@ -14,12 +14,18 @@ const Login = () => {
           <FormLabel mt="10px">Enter Your password :-</FormLabel>
           <Input type="password"></Input>
           </FormControl>
-          <Flex mt="10px" border={"1px solid green"} justifyContent={"space-between"}>
+          <Flex mt="10px" justifyContent={"space-between"}>
           <Checkbox defaultChecked>Remember me</Checkbox>
              <Button>Forgot your password?</Button>
           </Flex>
-          
-            <Button mt="10px" mx="auto" border={"1px solid red"} backgroundColor="blue" colorScheme="white" w={["100%","150px"]} type="submit">Login</Button>
+          <Button  mt="20px" type={ "submit"}
+                  bg={'blue.400'}
+                  color={'white'}
+                  _hover={{
+                    bg: 'blue.500',
+                  }}>
+                  Sign in
+                </Button>
            
       </Flex>
    </Box>
