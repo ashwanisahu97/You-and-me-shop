@@ -3,16 +3,16 @@ import React from 'react'
 
 const Login = () => {
   return (
-    <Box border={"1px solid red"} borderRadius="10px" w={["full", "md"]} mx={"auto"} position="relative" top={'150px'} p={"10px"} >
+    <Box  boxShadow={'lg'} rounded={'lg'} borderRadius="10px" w={["full", "md"]} mx={"auto"} position="relative" top={'150px'} p={"10px"} >
  
         <Heading  mb="20px" textAlign={"center"}> Login to your account</Heading>
    
       <Flex flexDirection={"column"}>
         <FormControl>
-          <FormLabel>Enter Your Email:-</FormLabel>
-          <Input type="email"></Input>
-          <FormLabel mt="10px">Enter Your password :-</FormLabel>
-          <Input type="password"></Input>
+          <FormLabel>Email address</FormLabel>
+          <Input type="email" isRequired/>
+          <FormLabel mt="10px">Password</FormLabel>
+          <Input type="password" isRequired/>
           </FormControl>
           <Flex mt="10px" justifyContent={"space-between"}>
           <Checkbox defaultChecked>Remember me</Checkbox>
