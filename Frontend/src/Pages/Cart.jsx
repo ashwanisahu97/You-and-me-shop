@@ -1,10 +1,11 @@
 import { Box } from '@chakra-ui/react'
 import React, { useEffect } from 'react'
 import { useDispatch, useSelector } from 'react-redux';
+import { getFromCart } from '../Redux/Cart/action';
 
 const Cart = () => {
   const dispatch = useDispatch();
-  const cartData=useSelector((store)=>cart.data)
+  const cartData=useSelector((store)=>store.cart.data)
   useEffect(() => { 
   dispatch(getFromCart())
   }, [])
