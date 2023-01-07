@@ -51,10 +51,6 @@ const Navbar = () => {
       </MenuList>
 </Menu>
   
-      {/* <MenuList>
-        <MenuItem>Download</MenuItem>
-        <MenuItem onClick={() => alert('Kagebunshin')}>Create a Copy</MenuItem>
-      </MenuList> */}
           </Box>
         <Box><Link to="/wishlist"><AiOutlineHeart/></Link></Box>
       </Flex>
