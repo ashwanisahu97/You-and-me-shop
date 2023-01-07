@@ -24,7 +24,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { fetchData} from '../Redux/Product/action';
 import {useNavigate, useParams } from 'react-router-dom';
 import { addToCart } from '../Redux/Cart/action';
-import { BsCart, BsCartFill} from "react-icons/bs"
+import {BsCartFill} from "react-icons/bs"
 import { AiFillStar, AiOutlineHeart } from "react-icons/ai"
 const ProductDetails = () => {
   const dispatch = useDispatch();
