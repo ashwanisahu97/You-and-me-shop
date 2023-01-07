@@ -48,9 +48,10 @@ const ProductDetails = () => {
       </Box>
       <Box w="50%" boxSizing='border-box' p="20px" fontSize={"20px"}>
         <Heading>{ singleProduct?.title}</Heading>
-          <Text>{singleProduct?.rating?.rate?(for(let i=0;i<Math.floor(rate.length);i++0){ 
-            return ( <span class="fa fa-star checked"></span>)
-          }):<></>;}</Text>
+          <Text>
+            <strong>Rating :</strong> <span style={{ background: "green", color: "#fff", padding: "2px 5px", borderRadius: "5px" }}>{singleProduct?.rating?.rate} ★	</span>
+          </Text>
+          
         <Text>{ singleProduct?.description}</Text>
         <Text color="red">${ singleProduct?.price}</Text>
       </Box>
