@@ -57,7 +57,6 @@ const Cart = () => {
             alignItems="center"
             h="300px"
             key={item.id}
-            border="1px solid red"
             borderRadius="lg"
           >
             <Box
@@ -71,7 +70,6 @@ const Cart = () => {
               <Image
                  borderRadius={"10px"}
              boxShadow="rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px"
-              border={"1px solid green"}
               src={item.image}
               alt={item.category}
                 w="100%"
@@ -80,7 +78,6 @@ const Cart = () => {
     
     </Box>
             <Box
-               border={"1px solid green"}
                 fontWeight="semibold"
                 as="h4"
               lineHeight="tight"
@@ -91,7 +88,6 @@ const Cart = () => {
               </Box>
 
             <Box
-               border={"1px solid green"}
                 justifyContent="center"
                 alignItems="center"
               >
@@ -111,7 +107,6 @@ const Cart = () => {
 
              
             <Button
-               border={"1px solid green"}
               w="350px"
               h="60px"
               fontSize={"4xl"}
