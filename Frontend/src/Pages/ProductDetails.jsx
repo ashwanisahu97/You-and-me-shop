@@ -49,11 +49,14 @@ const ProductDetails = () => {
       <Box w="50%" boxSizing='border-box' p="20px" fontSize={"20px"}>
         <Heading>{ singleProduct?.title}</Heading>
           <Text>
-            <strong>Rating :</strong> <span style={{ background: "green", color: "#fff", padding: "2px 5px", borderRadius: "5px" }}>{singleProduct?.rating?.rate} ★	</span>
+            <strong>Rating :</strong> <span style={{ background: "white", color: "red.500", padding: "2px 5px", borderRadius: "5px" }}>{singleProduct?.rating?.rate} ★	</span>
           </Text>
           
-        <Text>{ singleProduct?.description}</Text>
+          <Text color={"grey.500"}>{singleProduct?.description}</Text>
+          <Flex gap={"5px"}>
+            <Text fontWeight={"bold"} color={"grey.300"}>Price</Text>
         <Text color="red">${ singleProduct?.price}</Text>
+          </Flex>
       </Box>
       </Flex>
       <Flex h="50px" border={"1px solid red"} justifyContent={"space-between"}>
