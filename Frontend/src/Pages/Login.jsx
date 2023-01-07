@@ -3,9 +3,9 @@ import React from 'react'
 
 const Login = () => {
   return (
-    <Box  boxShadow={'lg'} rounded={'lg'} borderRadius="10px" w={["full", "md"]} mx={"auto"} position="relative" top={'150px'} p={"10px"} >
+    <Box  boxShadow={'lg'} rounded={'lg'} borderRadius="10px" w={["full", "md"]} mx={"auto"} position="relative" top={'120px'} p={"10px"} >
  
-        <Heading  mb="20px" textAlign={"center"}> Login to your account</Heading>
+        <Heading  mb="25px" textAlign={"center"}> Login to your account</Heading>
    
       <Flex flexDirection={"column"}>
         <FormControl isRequired>

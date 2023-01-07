@@ -30,7 +30,7 @@ const Homepage = () => {
                 <Box fontSize={ "lg"} p={ "10px"} h={"150px"}>
                   <Text fontSize="lg">{element.title}</Text>
                   <Flex gap={ 10}>
-                    <Text>${element.price}</Text>
+                    <Text color={'gray.600'}>${element.price}</Text>
                     <Text textDecoration={'line-through'} color={'gray.600'}>
                 $199
               </Text>

@@ -3,7 +3,7 @@ import React from 'react'
 
 const Signup = () => {
   return (
-    <Box  boxShadow={'lg'} rounded={'lg'} borderRadius="10px" w={["full", "md"]} mx={"auto"} position="relative" top={'150px'} p={"10px"} >
+    <Box  boxShadow={'lg'} rounded={'lg'} borderRadius="10px" w={["full", "md"]} mx={"auto"} position="relative" top={'100px'} p={"10px"} >
  
         <Heading  mb="20px" textAlign={"center"}> Create your account</Heading>
    
