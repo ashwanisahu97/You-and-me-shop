@@ -29,28 +29,7 @@ const Navbar = () => {
           <Box><Link to="/login">Login</Link></Box>
         <Box><Link to="/signup">Signup</Link></Box>
         <Box>
-        
-       
-        <Menu>
-      <MenuButton isactive={isOpen}>
-        {isOpen ? 'Close' :  <BsCartFill />}
-      </MenuButton>
-      <MenuList>
-              <MenuItem minH={"100px"}>
-                <Box>
-                  {cartData.map((e) => { 
-                    return (
-                      <Box>
-                        <Image src={ e.image}></Image>
-                      </Box>
-                    )
-                  })}
-                  </Box>
-              </MenuItem>
-        
-      </MenuList>
-</Menu>
-  
+       <Link to="/cart"><BsCartFill /></Link>
           </Box>
         <Box><Link to="/wishlist"><AiOutlineHeart/></Link></Box>
       </Flex>
