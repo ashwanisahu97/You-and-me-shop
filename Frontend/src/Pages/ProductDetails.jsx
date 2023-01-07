@@ -41,13 +41,13 @@ const ProductDetails = () => {
   }, [products.length])
   console.log("single product",singleProduct)
   return (
-    <Box border="1px solid red" position={"relative"} top="100px" width="60%" marginX={"auto"} borderRadius="10px">
+    <Box boxShadow="rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px" position={"relative"} top="100px" width="60%" marginX={"auto"} borderRadius="10px">
     <Flex>
-      <Box p="10px" w="50%">
-        <Image src={ singleProduct?.image}></Image>
+      <Box p="10px" w="50%" h="400px">
+        <Image h="100%" src={ singleProduct?.image}></Image>
       </Box>
       <Box w="50%" boxSizing='border-box' p="20px" fontSize={"20px"}>
-        <Heading>{ singleProduct?.title}</Heading>
+        <Tex>{ singleProduct?.title}</Heading>
           <Text>
             <strong>Rating :</strong> <span style={{ background: "white", color: "red.500", padding: "2px 5px", borderRadius: "5px" }}>{singleProduct?.rating?.rate} ★	</span>
           </Text>
