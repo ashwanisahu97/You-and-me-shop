@@ -44,9 +44,9 @@ const Navbar = () => {
         <Box>
        <Link to="/cart"><BsCartFill /></Link>
           </Box>
-        <Box> <Button ref={btnRef} colorScheme='teal'  onClick={onOpen}>
+        <Box> <Box ref={btnRef} color='red' onClick={onOpen}>
         <AiOutlineHeart/>
-        </Button>
+        </Box>
           <Drawer
             w="400px"
         isOpen={isOpen}

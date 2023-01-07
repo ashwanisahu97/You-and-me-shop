@@ -16,6 +16,7 @@ import {
   VisuallyHidden,
   List,
   ListItem,
+  Icon
 } from '@chakra-ui/react';
 import { FaInstagram, FaTwitter, FaYoutube } from 'react-icons/fa';
 import { MdLocalShipping } from 'react-icons/md';
@@ -24,7 +25,7 @@ import { fetchData} from '../Redux/Product/action';
 import {useNavigate, useParams } from 'react-router-dom';
 import { addToCart } from '../Redux/Cart/action';
 import { BsCart, BsCartFill} from "react-icons/bs"
-import { AiOutlineHeart } from "react-icons/ai"
+import { AiFillStar, AiOutlineHeart } from "react-icons/ai"
 const ProductDetails = () => {
   const dispatch = useDispatch();
   const navigate = useNavigate();
@@ -49,7 +50,16 @@ const ProductDetails = () => {
       <Box w="50%" boxSizing='border-box' p="10px" fontSize={"20px"}>
         <Text fontWeight={"bold"} fontSize={"3xl"}>{ singleProduct?.title}</Text>
           <Text>
-            <strong>Rating :</strong> <span style={{ background: "white", color: "red.500", padding: "2px 5px", borderRadius: "5px" }}>{singleProduct?.rating?.rate} ★	</span>
+          {Array(5)
+                  .fill("")
+                  .map((_, i) => (
+                    <Icon
+                      as={AiFillStar}
+                      key={i}
+                      fontSize="lg"
+                      color={i < singleProduct?.rating?.rate ? "yellow.500" : "gray.300"}
+                    />
+                  ))}
           </Text>
           
           <Text color={"grey.500"}>{singleProduct?.description}</Text>
