@@ -7,7 +7,7 @@ import { AiOutlineHeart } from "react-icons/ai"
 import { useDispatch, useSelector } from 'react-redux'
 import { getFromCart } from '../Redux/Cart/action'
 const Navbar = () => {
-  const { isOpen, onOpen, onClose } = useDisclosure();
+  // const { isOpen, onOpen, onClose } = useDisclosure();
   const dispatch = useDispatch();
   const cartData=useSelector((store)=>store.cart.cart)
   useEffect(() => { 
