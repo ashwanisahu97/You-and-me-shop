@@ -9,7 +9,7 @@ import {
   DrawerContent,
   DrawerCloseButton,
 } from '@chakra-ui/react'
-import { Link } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 import { AiOutlineSearch } from "react-icons/ai"
 import { BsCartFill} from "react-icons/bs"
 import { AiOutlineHeart } from "react-icons/ai"
@@ -18,6 +18,7 @@ import { getFromCart } from '../Redux/Cart/action'
 import Wishlist from '../Pages/Wishlist'
 const Navbar = () => {
   // const { isOpen, onOpen, onClose } = useDisclosure();
+  const navigate = useNavigate();
   const dispatch = useDispatch();
   const { isOpen, onOpen, onClose } = useDisclosure()
   const btnRef = React.useRef()
@@ -62,23 +63,30 @@ const Navbar = () => {
                 {
                   cartData?.map((e) => {
                     return (
-                      <Box>
-                      <Flex borderRadius={"10px"} boxShadow="rgba(0, 0, 0, 0.1) 0px 10px 50px" gap="3" p="5px" mb="10px" boxSizing='border-box'>
+                      <Box boxShadow="rgba(0, 0, 0, 0.1) 0px 10px 50px" boxSizing='border-box'  mb="20px">
+                      <Flex borderRadius={"10px"}  gap="3" p="5px" boxSizing='border-box' mb='5px'>
                       <Box w="50%" h="110px">
                       <Image w="100%" h="100%" src={ e.image}></Image>
                         </Box>
                         <Box w="50%">
-                          <Text overflow={"hidden"} h="50px">{ e.title}</Text>
-                          <Text>Price:{ e.price}</Text>
+                          <Text fontWeight={"bold"} overflow={"hidden"} h="50px">{ e.title}</Text>
+                          <Text fontSize={"lg"}>Price:${ e.price}</Text>
                         </Box>
                         </Flex>
-                        <Flex gap="3">
-                          <Flex textAlign={"center"} w="45%" p="2px" px="3px" gap="1" bg="teal" color={"white"} _hover={{ bg: "red", color: "white" }} borderRadius="5px">
-                            <Text>Add To</Text> 
-                            <BsCartFill fontSize="20px" />
-                          </Flex>
-                          <Flex w="45%" bg="teal" color={"white"} _hover={{ bg: "red", color: "white" }}>Remove from <AiOutlineHeart/></Flex>
-                      </Flex>
+                        <Flex h="30px" justifyContent={"space-between"}>
+        <Flex onClick={() => {
+          navigate("/cart")
+        }} backgroundColor={"teal"} _hover={{cursor:"pointer",bg:"red"}} color="white" gap="2px" justifyContent="center" borderRadius="10px" alignItems="center" fontSize={"xl"}  w={"36%"}>
+          <Text> Add To</Text>
+         <Box><BsCartFill/></Box> 
+        </Flex>
+        <Flex onClick={() => {
+          navigate("/wishlist")
+        }} backgroundColor={"teal"} _hover={{cursor:"pointer",bg:"red"}} color="white" gap="2px" justifyContent="center" borderRadius="10px" border="1px solid green" alignItems="center" fontSize={"xl"}  w={"60%"}>
+          <Text>Remove From</Text>
+          <Box><AiOutlineHeart/></Box>
+        </Flex>
+      </Flex>
                       </Box>
                     )
                   })
