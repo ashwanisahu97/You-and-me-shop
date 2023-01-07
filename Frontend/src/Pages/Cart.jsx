@@ -48,23 +48,21 @@ const Cart = () => {
 
       <Box columns={[1, 2, 3, 4]} spacing="40px" pt="10">
         {cartData?.map((item) => (
-          <Flex
+          <Flex 
+            h="300px"
             key={item.id}
             border="1px solid red"
             borderRadius="lg"
-            overflow="hidden"
           >
-            <Box w="100px">
             <Image
               src={item.image}
               alt={item.category}
               h="100%"
               w="100%"
-              objectFit="contain"
             />
-             </Box>
-              <Box display="flex" alignItems="baseline">
-                <Badge borderRadius="full" px="2" colorScheme="teal">
+    
+              <Box>
+                <Badge borderRadius="full" colorScheme="teal">
                   Category
                 </Badge>
 
@@ -74,18 +72,15 @@ const Cart = () => {
                   letterSpacing="wide"
                   fontSize="xs"
                   textTransform="uppercase"
-                  ml="2"
                 >
                   {item.category}
                 </Box>
-             
+             </Box>
 
               <Box
-                mt="1"
                 fontWeight="semibold"
                 as="h4"
                 lineHeight="tight"
-                noOfLines={1}
               >
                 {item.title}
               </Box>
@@ -96,7 +91,6 @@ const Cart = () => {
 
               <Box
                 display="flex"
-                mt="2"
                 justifyContent="center"
                 alignItems="center"
               >
@@ -114,7 +108,7 @@ const Cart = () => {
                 </Box>
               </Box>
 
-              <Flex justify="center" align="center" mt={5}>
+             
                 <Button
                   w="container.sm"
                   bg="blue.600"
@@ -147,18 +141,15 @@ const Cart = () => {
                 >
                   +
                 </Button>
-              </Flex>
 
               <Button
-                w="full"
+                w="400px"
                 bg="red.500"
                 color="white"
                 _hover={{ color: "red", bg: "white", border: "1px solid red" }}
-                m="2"
               >
                 DELETE
               </Button>
-            </Box>
           </Flex>
         ))}
       </Box>
