@@ -41,9 +41,9 @@ const ProductDetails = () => {
   }, [products.length])
   console.log("single product",singleProduct)
   return (
-    <Box boxShadow="rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px" position={"relative"} top="100px" width="60%" marginX={"auto"} borderRadius="10px">
+    <Box boxShadow="rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px" position={"relative"} top="100px" width="60%" marginX={"auto"} p="5px" borderRadius="10px">
     <Flex>
-      <Box p="10px" w="50%" h="400px">
+      <Box p="10px" w="50%" h="350px">
         <Image h="100%" src={ singleProduct?.image}></Image>
       </Box>
       <Box w="50%" boxSizing='border-box' p="10px" fontSize={"20px"}>
