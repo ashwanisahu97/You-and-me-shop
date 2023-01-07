@@ -87,7 +87,7 @@ const Cart = () => {
               w="500px"
             >
               <Text color={"grey"} fontSize={"2xl"}>Title</Text>
-                {item.title}
+              <Text color={"grey.300"}>{item.title}</Text>
               </Box>
 
             <Box
