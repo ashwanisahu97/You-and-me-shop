@@ -34,7 +34,7 @@ const Cart = () => {
 
             <SimpleGrid columns={ [ 1, 2, 3, 4 ] } spacing='40px' pt='10'  >
 
-                { cartData && cartData.map((item) => (
+                { cartData?.map((item) => (
                     <Box key={ item.id } borderWidth='1px' borderRadius='lg' overflow='hidden'>
 
                         <Image src={ item.image } alt={ item.category } h='200px' w='full' p='2'
@@ -79,11 +79,11 @@ const Cart = () => {
                                     .map((_, i) => (
                                         <Icon as={ AiFillStar }
                                             key={ i }
-                                            color={ i < item.rating.rate ? 'teal.500' : 'gray.300' }
+                                            color={ i < item?.rating?.rate ? 'teal.500' : 'gray.300' }
                                         />
                                     )) }
                                 <Box as='span' ml='2' color='gray.600' fontSize='sm'>
-                                    { item.rating.count } reviews
+                                    { item?.rating?.count } reviews
                                 </Box>
                             
                             </Box>
