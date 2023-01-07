@@ -124,6 +124,7 @@ const Cart = () => {
 
 
             <Button
+              border="1px solid red"
               w="350px"
               h="60px"
               fontSize={"4xl"}
