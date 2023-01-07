@@ -46,7 +46,8 @@ const Navbar = () => {
         <Box> <Button ref={btnRef} colorScheme='teal'  onClick={onOpen}>
         <AiOutlineHeart/>
         </Button>
-        <Drawer
+          <Drawer
+            w="400px"
         isOpen={isOpen}
         placement='right'
         onClose={onClose}
@@ -61,16 +62,24 @@ const Navbar = () => {
                 {
                   cartData?.map((e) => {
                     return (
-                      <Flex mb="10px" boxSizing='border-box' border={"1px solid red"}>
-                      <Box p="5px" w="50%" h="100px">
+                      <Box>
+                      <Flex borderRadius={"10px"} boxShadow="rgba(0, 0, 0, 0.1) 0px 10px 50px" gap="3" p="5px" mb="10px" boxSizing='border-box'>
+                      <Box w="50%" h="110px">
                       <Image w="100%" h="100%" src={ e.image}></Image>
                         </Box>
                         <Box w="50%">
                           <Text overflow={"hidden"} h="50px">{ e.title}</Text>
                           <Text>Price:{ e.price}</Text>
-                          <Button bg="teal" color={"white"} _hover={{bg:"red",color:"white"}}>Add To Cart</Button>
                         </Box>
+                        </Flex>
+                        <Flex gap="3">
+                          <Flex textAlign={"center"} w="45%" p="2px" px="3px" gap="1" bg="teal" color={"white"} _hover={{ bg: "red", color: "white" }} borderRadius="5px">
+                            <Text>Add To</Text> 
+                            <BsCartFill fontSize="20px" />
+                          </Flex>
+                          <Flex w="45%" bg="teal" color={"white"} _hover={{ bg: "red", color: "white" }}>Remove from <AiOutlineHeart/></Flex>
                       </Flex>
+                      </Box>
                     )
                   })
                 }
