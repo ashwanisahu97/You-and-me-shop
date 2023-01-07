@@ -15,7 +15,7 @@ const Navbar = () => {
   }, [])
   console.log("cart data", cartData);
   return (
-      <Flex position="fixed" zIndex={"1"} gap="30px" alignItems={"center"} bg="#f7f8f7" w={"100%"}>
+      <Flex fontWeight="bold" fontSize={"xl"} position="fixed" zIndex={"1"} gap="30px" alignItems={"center"} bg="#f7f8f7" w={"100%"}>
           <Link to={"/"}><Image w={ "100"} h="100" src="https://i.pinimg.com/originals/ce/56/99/ce5699233cbc0f142250b520d967dff7.png"></Image></Link>
           <Box><Link to="/men">Men</Link> </Box>
           <Box><Link to="/women">Women</Link></Box>

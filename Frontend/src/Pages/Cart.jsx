@@ -93,10 +93,11 @@ const Cart = () => {
                     <Icon
                       as={AiFillStar}
                       key={i}
-                      color={i < item?.rating?.rate ? "teal.500" : "gray.300"}
+                      fontSize="lg"
+                      color={i < item?.rating?.rate ? "yellow.500" : "gray.300"}
                     />
                   ))}
-                <Box p={"10px"} as="span" w="100px" color="gray.600" fontSize="sm">
+                <Box p={"10px"} as="span" w="100px" color="gray.600" fontSize="lg">
                   {item?.rating?.count} reviews
                 </Box>
               </Box>
