@@ -46,8 +46,8 @@ const ProductDetails = () => {
       <Box p="10px" w="50%" h="400px">
         <Image h="100%" src={ singleProduct?.image}></Image>
       </Box>
-      <Box w="50%" boxSizing='border-box' p="20px" fontSize={"20px"}>
-        <Tex>{ singleProduct?.title}</Heading>
+      <Box w="50%" boxSizing='border-box' p="10px" fontSize={"20px"}>
+        <Text fontWeight={"bold"} fontSize={"3xl"}>{ singleProduct?.title}</Text>
           <Text>
             <strong>Rating :</strong> <span style={{ background: "white", color: "red.500", padding: "2px 5px", borderRadius: "5px" }}>{singleProduct?.rating?.rate} ★	</span>
           </Text>
