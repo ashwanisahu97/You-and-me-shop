@@ -20,13 +20,13 @@ const Homepage = () => {
   return (
     <Grid gridGap={"30px"} templateColumns={"repeat(4,1fr)"} position={"relative"} top={ "100px"}>
       {
-        loading ? <Text color="red" m={ "auto"}>Data is loading</Text> : error ? <Text color="red" m={ "auto"}>Something went wrong,please try again</Text> :
+        loading ? <Text textAlign={"center"} color="red" m={ "auto"}>Data is loading</Text> : error ? <Text color="red" m={ "auto"}>Something went wrong,please try again</Text> :
           products?.map((element) => { 
             return (
               <Box onClick={() => {
                 navigate(`/productDetails/${element.id}`)
               }} key={element.id} boxShadow={"rgba(100, 100, 111, 0.2) 0px 7px 29px 0px"} mb={"15px"} borderRadius={"10px"}>
-                <Box h={ "300px"}><Image w={"90%"} h={ "100%"} src={element.image}></Image></Box>
+                <Box h={ "300px"}><Image w={"90%"} mx="5%" h={ "100%"} src={element.image}></Image></Box>
                 <Box fontSize={ "lg"} p={ "10px"} h={"150px"}>
                   <Text fontSize="lg">{element.title}</Text>
                   <Flex gap={ 10}>
