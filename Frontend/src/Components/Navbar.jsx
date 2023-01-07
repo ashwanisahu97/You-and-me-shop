@@ -37,7 +37,6 @@ const Navbar = () => {
       </MenuButton>
       <MenuList>
               <MenuItem minH={"100px"}>
-                <Text>Your Cart Is empty</Text>
                 <Box>
                   {cartData.map((e) => { 
                     return (

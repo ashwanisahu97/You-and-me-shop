@@ -16,7 +16,7 @@ const Homepage = () => {
       dispatch(fetchData())
      }
   }, [dispatch,products?.length])
-  console.log("products1",products)
+  console.log("products",products)
   return (
     <Grid gridGap={"30px"} templateColumns={"repeat(4,1fr)"} position={"relative"} top={ "100px"}>
       {
