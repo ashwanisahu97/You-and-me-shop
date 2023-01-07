@@ -2,12 +2,10 @@ import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { getFromCart } from "../Redux/Cart/action";
 import {
-  Badge,
   Box,
   Button,
   Container,
   Flex,
-  Grid,
   Icon,
   Image,
   Text,
