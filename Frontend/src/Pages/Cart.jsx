@@ -5,7 +5,7 @@ import { getFromCart } from '../Redux/Cart/action';
 
 const Cart = () => {
   const dispatch = useDispatch();
-  const cartData=useSelector((store)=>store.cart.data)
+  const cartData=useSelector((store)=>store.cart.cart)
   useEffect(() => { 
   dispatch(getFromCart())
   }, [])
