@@ -32,7 +32,7 @@ const Navbar = () => {
         
        
         <Menu>
-      <MenuButton isActive={isOpen}>
+      <MenuButton isactive={isOpen}>
         {isOpen ? 'Close' :  <BsCartFill />}
       </MenuButton>
       <MenuList>

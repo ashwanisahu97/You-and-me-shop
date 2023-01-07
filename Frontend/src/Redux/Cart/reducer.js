@@ -15,7 +15,7 @@ const reducer = (state = initState, { type,payload}) => {
             return {
                 ...state,
                 loading: false,
-                cart:[...state.cart,payload]
+                cart:payload
             }
         case Types.GET_FROM_CART_FAILURE:
             return {

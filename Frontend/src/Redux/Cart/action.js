@@ -34,9 +34,9 @@ export const getFromCartFailure = () => {
 
 export const getFromCart = () => (dispatch) => { 
         dispatch(getFromCartRequest());
-    axios.post("http://localhost:8080/cart").then(({ data}) => { 
+    axios.get("http://localhost:8080/cart").then(({ data}) => { 
         console.log("data", data)
-        getFromCartSuccess(data)
+        dispatch(getFromCartSuccess(data))
     }).catch(() => { 
         dispatch(getFromCartFailure())
     })
