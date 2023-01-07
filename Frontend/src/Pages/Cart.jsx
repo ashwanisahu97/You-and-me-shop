@@ -49,6 +49,8 @@ const Cart = () => {
       <Box columns={[1, 2, 3, 4]} spacing="40px" pt="10">
         {cartData?.map((item) => (
           <Flex 
+            justifyContent={"center"}
+            alignItems="center"
             h="300px"
             key={item.id}
             border="1px solid red"
@@ -58,29 +60,14 @@ const Cart = () => {
               src={item.image}
               alt={item.category}
               h="100%"
-              w="100%"
             />
     
-              <Box>
-                <Badge borderRadius="full" colorScheme="teal">
-                  Category
-                </Badge>
-
-                <Box
-                  color="gray.500"
-                  fontWeight="semibold"
-                  letterSpacing="wide"
-                  fontSize="xs"
-                  textTransform="uppercase"
-                >
-                  {item.category}
-                </Box>
-             </Box>
 
               <Box
                 fontWeight="semibold"
                 as="h4"
-                lineHeight="tight"
+              lineHeight="tight"
+              w="500px"
               >
                 {item.title}
               </Box>
@@ -103,22 +90,23 @@ const Cart = () => {
                       color={i < item?.rating?.rate ? "teal.500" : "gray.300"}
                     />
                   ))}
-                <Box as="span" ml="2" color="gray.600" fontSize="sm">
+                <Box p={"10px"} as="span" w="100px" color="gray.600" fontSize="sm">
                   {item?.rating?.count} reviews
                 </Box>
               </Box>
 
              
                 <Button
-                  w="container.sm"
-                  bg="blue.600"
+              w="350px"
+              h="60px"
+              fontSize={"4xl"}
+                  bg="blue.500"
                   color="white"
                   _hover={{
-                    color: "blue.500",
-                    bg: "white",
+                    bg: "blue.800",
+                    color: "white",
                     border: "1px solid blue",
                   }}
-                  m="2"
                   disabled={item.quantity === 1}
                 >
                   -
@@ -129,24 +117,26 @@ const Cart = () => {
                 </Text>
 
                 <Button
-                  w="container.sm"
-                  bg="blue.600"
+              w="350px"
+              h="60px"
+              fontSize={"4xl"}
+                  bg="blue.500"
                   color="white"
                   _hover={{
-                    color: "blue.500",
-                    bg: "white",
+                    bg: "blue.800",
+                    color: "white",
                     border: "1px solid blue",
                   }}
-                  m="2"
                 >
                   +
                 </Button>
 
               <Button
-                w="400px"
+             w="350px"
+             h="60px"
                 bg="red.500"
                 color="white"
-                _hover={{ color: "red", bg: "white", border: "1px solid red" }}
+                _hover={{ bg: "red>800", color: "white", border: "1px solid red" }}
               >
                 DELETE
               </Button>
