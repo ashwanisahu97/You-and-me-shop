@@ -54,10 +54,9 @@ const Cart = () => {
             alignItems="center"
             h="300px"
             key={item.id}
-            borderRadius="lg"
+            borderRadius="10px"
           >
             <Box
-             
               boxSizing="border-box"
              h="300px"
               w="600px"
