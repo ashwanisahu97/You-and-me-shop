@@ -41,7 +41,7 @@ const ProductDetails = () => {
   }, [products.length])
   console.log("single product",singleProduct)
   return (
-    <Box border="1px solid red" position={"relative"} top="100px" width="60%" marginX={"auto"}>
+    <Box border="1px solid red" position={"relative"} top="100px" width="60%" marginX={"auto"} borderRadius="10px">
     <Flex>
       <Box p="10px" w="50%">
         <Image src={ singleProduct?.image}></Image>
