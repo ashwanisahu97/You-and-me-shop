@@ -59,7 +59,7 @@ const ProductDetails = () => {
           </Flex>
       </Box>
       </Flex>
-      <Flex h="50px" border={"1px solid red"} justifyContent={"space-between"}>
+      <Flex h="50px" justifyContent={"space-between"}>
         <Flex onClick={() => {
           navigate("/cart")
         }} backgroundColor={"teal"} _hover={{cursor:"pointer",bg:"red"}} color="white" gap="10px" justifyContent="center" borderRadius="10px" border="1px solid green" alignItems="center" fontSize={"2xl"}  w={"45%"}>
