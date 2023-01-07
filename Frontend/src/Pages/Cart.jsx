@@ -48,7 +48,11 @@ const Cart = () => {
 
       <Box columns={[1, 2, 3, 4]} spacing="40px" pt="10">
         {cartData?.map((item) => (
-          <Flex 
+          <Flex
+            p="10px"
+          boxShadow="rgba(100, 100, 111, 0.2) 0px 7px 29px 0px"  
+            mb="20px"
+          gap="10px"
             justifyContent={"center"}
             alignItems="center"
             h="300px"
@@ -56,28 +60,38 @@ const Cart = () => {
             border="1px solid red"
             borderRadius="lg"
           >
-            <Image
+            <Box
+             
+              boxSizing="border-box"
+             h="300px"
+              w="600px"
+              p="10px"
+             
+            >
+              <Image
+                 borderRadius={"10px"}
+             boxShadow="rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px"
+              border={"1px solid green"}
               src={item.image}
               alt={item.category}
-              h="100%"
+                w="100%"
+                h="100%"
             />
     
-
-              <Box
+    </Box>
+            <Box
+               border={"1px solid green"}
                 fontWeight="semibold"
                 as="h4"
               lineHeight="tight"
               w="500px"
-              >
+            >
+              <Text color={"grey"} fontSize={"2xl"}>Title</Text>
                 {item.title}
               </Box>
 
-              <Box as="h1" color="gray.600" fontWeight="bold">
-                {/* { formatCurrency(item.price) } */}
-              </Box>
-
-              <Box
-                display="flex"
+            <Box
+               border={"1px solid green"}
                 justifyContent="center"
                 alignItems="center"
               >
@@ -96,7 +110,8 @@ const Cart = () => {
               </Box>
 
              
-                <Button
+            <Button
+               border={"1px solid green"}
               w="350px"
               h="60px"
               fontSize={"4xl"}
@@ -112,11 +127,9 @@ const Cart = () => {
                   -
                 </Button>
 
-                <Text fontSize="3xl" m="2">
-                  {item.quantity}
-                </Text>
 
-                <Button
+            <Button
+               border={"1px solid green"}
               w="350px"
               h="60px"
               fontSize={"4xl"}
@@ -131,12 +144,14 @@ const Cart = () => {
                   +
                 </Button>
 
-              <Button
+            <Button
+              fontSize={"xl"}
+               border={"1px solid green"}
              w="350px"
              h="60px"
                 bg="red.500"
                 color="white"
-                _hover={{ bg: "red>800", color: "white", border: "1px solid red" }}
+                _hover={{ bg: "red.700", color: "white", border: "1px solid red" }}
               >
                 DELETE
               </Button>
