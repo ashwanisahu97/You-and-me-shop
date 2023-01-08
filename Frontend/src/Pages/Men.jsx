@@ -1,4 +1,3 @@
-import { Box, Image,Text,Flex, Grid } from '@chakra-ui/react';
 import React, { useEffect } from 'react'
 import { useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
@@ -26,7 +25,8 @@ const Men = () => {
   },[products.length])
   
   return (
-   <ProductSimple/>
+    <ProductSimple data={mensData} loading={loading} error={error} />
+  )
 }
 
 export default Men
