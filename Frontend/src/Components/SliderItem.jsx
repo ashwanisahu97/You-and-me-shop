@@ -1,6 +1,6 @@
 import React from 'react';
-import styles from './SliderItem.module.css';
 import { useNavigate } from "react-router-dom";
+import styles from './SliderItem.module.css';
 
 const SliderItem = ({id, image, brand, title, price}) => {
   const navigate = useNavigate();
