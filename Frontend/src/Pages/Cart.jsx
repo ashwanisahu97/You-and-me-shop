@@ -23,9 +23,9 @@ const Cart = () => {
   const dispatch = useDispatch();
   const cartData = useSelector((store) => store.cart.cart);
   useEffect(() => {
-    dispatch(getFromCart());
-  }, []);
-  const handleDelete = (id) =.{ 
+    dispatch(getFromCart())
+  }, [cartData?.length]);
+  const handleDelete = (id) =>{ 
     dispatch(deleteFromCart(id));
   }
   console.log("cartData", cartData);
@@ -139,7 +139,7 @@ const Cart = () => {
                 </Button>
 
             <Button
-            onClick={handleDelete}
+              onClick={() => { handleDelete(item.id) }}
               fontSize={"xl"}
              w="350px"
              h="60px"
