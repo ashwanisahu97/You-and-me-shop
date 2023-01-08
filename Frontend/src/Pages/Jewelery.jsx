@@ -2,6 +2,7 @@ import React, { useEffect } from 'react'
 import { useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { fetchData } from '../Redux/Product/action';
+import ProductSimple from '../Components/ProductSimple';
 
 const Jewelery = () => {
   const dispatch = useDispatch();

@@ -1,4 +1,4 @@
-import { Box, Image,Text,Flex, Grid } from '@chakra-ui/react';
+import { Box, Image,Text,Flex, Grid, Center } from '@chakra-ui/react';
 import React, { useEffect } from 'react'
 import { useNavigate } from 'react-router-dom';
 
@@ -7,7 +7,7 @@ const ProductSimple = ({ loading, error, data }) => {
   return (
     <Grid gridGap={"30px"} templateColumns={"repeat(4,1fr)"} position={"relative"} top={ "100px"}>
       {
-        loading ? <Text textAlign={"center"} color="red" m={ "auto"}>Data is loading</Text> : error ? <Text color="red" m={ "auto"}>Something went wrong,please try again</Text> :
+        loading ? <Center textAlign={"center"} color="red" m={ "auto"}>Data is loading </Center> : error ? <Text color="red" m={ "auto"}>Something went wrong,please try again</Text> :
           data?.map((element) => { 
             return (
               <Box onClick={() => {
