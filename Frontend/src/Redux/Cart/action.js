@@ -42,6 +42,34 @@ export const getFromCart = () => (dispatch) => {
     })
      
 }
+export const deleteFromCartRequest = () => { 
+    return {
+        type:Types.DELETE_FROM_CART_REQUEST
+    }
+}
+export const deleteFromCartSuccess = (payload) => { 
+    return {
+        type: Types.DELETE_FROM_CART_SUCCESS,
+        payload
+    }
+}
+export const deleteFromCartFailure = () => { 
+    return {
+        type: Types.DELETE_FROM_CART_FAILURE
+    }
+}
+
+export const deleteFromCart = () => (dispatch) => { 
+        dispatch(deleteFromCartRequest());
+    axios.delete("http://localhost:8080/cart").then(({ data}) => { 
+        console.log("data", data)
+        dispatch(deleteFromCartSuccess(data))
+    }).catch(() => { 
+        dispatch(deleteFromCartFailure())
+    })
+     
+}
+
 export const addToCart = (prod) => (dispatch) => { 
         dispatch(addToCartRequest());
     axios.post("http://localhost:8080/cart",prod).then(({ data}) => { 
