@@ -5,9 +5,10 @@ export const addToCartRequest = () => {
         type:Types.ADD_TO_CART_REQUEST
     }
 }
-export const addToCartSuccess = () => { 
+export const addToCartSuccess = (payload) => { 
     return {
         type: Types.ADD_TO_CART_SUCCESS,
+        payload
     }
 }
 export const addToCartFailure = () => { 
@@ -61,10 +62,12 @@ export const deleteFromCartFailure = () => {
 
 export const deleteFromCart = (id) => (dispatch) => { 
         dispatch(deleteFromCartRequest());
-    axios.delete(`http://localhost:8080/cart/${id}`).then(({ data}) => { 
+    return axios.delete(`http://localhost:8080/cart/${id}`).then(({ data}) => { 
         console.log("data", data)
         alert("deleted from cart");
         dispatch(deleteFromCartSuccess())
+    }).then(() => { 
+        dispatch(getFromCart())
     }).catch(() => { 
         dispatch(deleteFromCartFailure())
     })
@@ -73,9 +76,8 @@ export const deleteFromCart = (id) => (dispatch) => {
 
 export const addToCart = (prod) => (dispatch) => { 
         dispatch(addToCartRequest());
-    axios.post("http://localhost:8080/cart",prod).then(({ data}) => { 
-        console.log("data", data)
-        alert("hello data is saved");
+    return axios.post("http://localhost:8080/cart",prod).then(({ data}) => { 
+        alert("data added to a cart");
         addToCartSuccess(data)
     }).catch(() => { 
         dispatch(addToCartFailure())

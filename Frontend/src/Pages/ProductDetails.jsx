@@ -26,6 +26,11 @@ const ProductDetails = () => {
     const prod = products?.find((e) => e.id == id);
  setSingleProduct(prod)
   }, [products.length])
+  const handleAdd = () => { 
+    dispatch(addToCart(singleProduct)).then(() => { 
+      navigate("/cart")
+    })
+  }
   console.log("single product",singleProduct)
   return (
     <Box boxShadow="rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px" position={"relative"} top="100px" width="60%" marginX={"auto"} p="5px" borderRadius="10px">
@@ -57,7 +62,7 @@ const ProductDetails = () => {
       </Flex>
       <Flex h="50px" justifyContent={"space-between"}>
         <Flex onClick={() => {
-          navigate("/cart")
+          handleAdd();
         }} backgroundColor={"teal"} _hover={{cursor:"pointer",bg:"red"}} color="white" gap="10px" justifyContent="center" borderRadius="10px" alignItems="center" fontSize={"2xl"}  w={"45%"}>
          <Box><BsCartFill/></Box> 
           <Text> Add To Cart </Text>
