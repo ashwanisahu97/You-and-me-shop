@@ -1,11 +1,9 @@
 import { Box, Image,Text,Flex, Grid } from '@chakra-ui/react';
 import React, { useEffect } from 'react'
-import { useState } from 'react';
-import { useDispatch, useSelector } from 'react-redux';
-import { fetchData } from '../Redux/Product/action';
 import { useNavigate } from 'react-router-dom';
 
-const ProductSimple = ({ loading,error,data}) => {
+const ProductSimple = ({ loading, error, data }) => {
+    const navigate = useNavigate();
   return (
     <Grid gridGap={"30px"} templateColumns={"repeat(4,1fr)"} position={"relative"} top={ "100px"}>
       {

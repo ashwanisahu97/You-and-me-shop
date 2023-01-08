@@ -7,7 +7,6 @@ import ProductSimple from '../Components/ProductSimple';
 
 const Men = () => {
   const dispatch = useDispatch();
-  const navigate = useNavigate();
   const [mensData,setMensData]=useState([])
   const loading=useSelector((store)=>store.product.loading)
   const products=useSelector((store)=>store.product.data)
