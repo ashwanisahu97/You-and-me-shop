@@ -22,7 +22,7 @@ const Login = () => {
                   bg={'blue.400'}
                   color={'white'}
                   _hover={{
-                    bg: 'blue.500',
+                    bg: 'blue.700',
                   }}>
                   Sign in
                 </Button>
