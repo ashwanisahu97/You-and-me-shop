@@ -1,0 +1,441 @@
+{
+    "sliderData": [
+      {
+        "id": 1,
+        "gender": "women",
+        "category": "clothing",
+        "subcategory": "dress",
+        "image": "https://m.media-amazon.com/images/G/01/Shopbop/p/prod/products/berna/berna30007192f2/berna30007192f2_1650048139171_2-0._QL90_UX564_.jpg",
+        "brand": "Bernadette",
+        "title": "Birgit Floral Dress",
+        "price": 66568,
+        "desc": "Fabric: Heavyweight, non-stretch textured weave - Tiered seams with raw edges"
+      },
+      {
+        "id": 2,
+        "gender": "women",
+        "category": "clothing",
+        "subcategory": "shoes",
+        "image": "https://m.media-amazon.com/images/G/01/Shopbop/p/prod/products/neous/neous3006710d92/neous3006710d92_1651173660710_2-0._QL90_UX564_.jpg",
+        "brand": "NEOUS",
+        "title": "80mm Chost Sandals",
+        "price": 48204
+      },
+      {
+        "id": 3,
+        "gender": "women",
+        "category": "accessories",
+        "subcategory": "scarfs",
+        "image": "https://m.media-amazon.com/images/G/01/Shopbop/p/prod/products/abcxi/abcxi300201c3c8/abcxi300201c3c8_1651265198425_2-0._QL90_UX564_.jpg",
+        "brand": "Abacaxi",
+        "title": "Scarf Hem Unisex",
+        "price": 17598
+      },
+      {
+        "id": 4,
+        "gender": "women",
+        "category": "clothing",
+        "subcategory": "shorts",
+        "image": "https://m.media-amazon.com/images/G/01/Shopbop/p/prod/products/abcxi/abcxi300251c3c8/abcxi300251c3c8_1651265201071_2-0._QL90_UX564_.jpg",
+        "brand": "Abacaxi",
+        "title": "Drawstring Shorts",
+        "price": 12624
+      },
+      {
+        "id": 5,
+        "gender": "women",
+        "category": "bags",
+        "subcategory": "clutches",
+        "image": "https://m.media-amazon.com/images/G/01/Shopbop/p/prod/products/cultg/cultg3073379282/cultg3073379282_1651265717243_2-0._QL90_UX564_.jpg",
+        "brand": "Cult Gaia",
+        "title": "Enid Clutch",
+        "price": 25096
+      },
+      {
+        "id": 6,
+        "gender": "women",
+        "category": "bags",
+        "subcategory": "clutches",
+        "image": "https://m.media-amazon.com/images/G/01/Shopbop/p/prod/products/ajeee/ajeee301841a530/ajeee301841a530_1651246365461_2-0._QL90_UX564_.jpg",
+        "brand": "Aje",
+        "title": "Enid Clutch",
+        "price": 45526
+      },
+      {
+        "id": 7,
+        "gender": "women",
+        "category": "clothing",
+        "subcategory": "tops",
+        "image": "https://m.media-amazon.com/images/G/01/Shopbop/p/prod/products/jstan/jstan3010719238/jstan3010719238_1651253099578_2-0._QL90_UX564_.jpg",
+        "brand": "Jonathan Simkhai",
+        "title": "Peri One Shoulder",
+        "price": 10329
+      },
+      {
+        "id": 8,
+        "gender": "women",
+        "category": "clothing",
+        "subcategory": "skirts",
+        "image": "https://m.media-amazon.com/images/G/01/Shopbop/p/prod/products/vbear/vbear3200033124/vbear3200033124_1651519165436_2-0._QL90_UX564_.jpg",
+        "brand": "Veronica Beard",
+        "title": "Memphis Skirt",
+        "price": 26627
+      },
+      {
+        "id": 9,
+        "gender": "women",
+        "category": "clothing",
+        "subcategory": "dress",
+        "image": "https://m.media-amazon.com/images/G/01/Shopbop/p/prod/products/aelmy/aelmy30000102c8/aelmy30000102c8_1651509253747_2-0._QL90_UX564_.jpg",
+        "brand": "Arianne Elmy",
+        "title": "Green Good Luck Dress",
+        "price": 25623
+      },
+      {
+        "id": 10,
+        "gender": "women",
+        "category": "shoes",
+        "subcategory": "sandals",
+        "image": "https://m.media-amazon.com/images/G/01/Shopbop/p/prod/products/ptexa/ptexa300981d3b6/ptexa300981d3b6_1651266211390_2-0._QL90_UX564_.jpg",
+        "brand": "Paris Texas",
+        "title": "Wilma PVC Wedges",
+        "price": 40170
+      },
+      {
+        "id": 11,
+        "gender": "women",
+        "category": "clohing",
+        "subcategory": "tops",
+        "image": "https://m.media-amazon.com/images/G/01/Shopbop/p/prod/products/hlang/hlang421381c925/hlang421381c925_1651263545311_2-0._QL90_UX564_.jpg",
+        "brand": "Helmut Lang",
+        "title": "Rib Crop Tee",
+        "price": 11477
+      },
+      {
+        "id": 12,
+        "gender": "women",
+        "category": "clothing",
+        "subcategory": "shorts",
+        "image": "https://m.media-amazon.com/images/G/01/Shopbop/p/prod/products/ragbo/ragbo461171d8a7/ragbo461171d8a7_1651259761866_2-0._QL90_UX564_.jpg",
+        "brand": "Rag & Bone",
+        "title": "Dre Low Rise Shorts",
+        "price": 12624
+      },
+      {
+        "id": 13,
+        "gender": "women",
+        "category": "clothing",
+        "subcategory": "dress",
+        "image": "https://m.media-amazon.com/images/G/01/Shopbop/p/prod/products/jstan/jstan301121c925/jstan301121c925_1651506480152_2-0._QL90_UX564_.jpg",
+        "brand": "Jonathan Simkhai",
+        "title": "Clay Washed Linen",
+        "price": 13390
+      },
+      {
+        "id": 14,
+        "gender": "women",
+        "category": "clothing",
+        "subcategory": "skirts",
+        "image": "https://m.media-amazon.com/images/G/01/Shopbop/p/prod/products/jstan/jstan301051c925/jstan301051c925_1651506486402_2-0._QL90_UX564_.jpg",
+        "brand": "Jonathan Simkhai",
+        "title": "Stevie Linen Cut",
+        "price": 21041
+      }
+    ],
+  
+    "blackLedData": [
+      {
+        "id": 1,
+        "gender": "women",
+        "category": "clothing",
+        "subcategory": "tops",
+        "image": "https://m.media-amazon.com/images/G/01/Shopbop/p/prod/products/famon/famon30024102ca/famon30024102ca_1649083712854_2-0._QL90_UX414_.jpg",
+        "brand": "Fanm Mon",
+        "title": "Demre Crop Top",
+        "price": 14461
+      },
+      {
+        "id": 2,
+        "gender": "women",
+        "category": "shoes",
+        "subcategory": "boots",
+        "image": "https://m.media-amazon.com/images/G/01/Shopbop/p/prod/products/gamer/gamer304671d630/gamer304671d630_1647885243923_2-0._QL90_UX414_.jpg",
+        "brand": "Good American",
+        "title": "Good Classic Boot",
+        "price": 12165
+      },
+      {
+        "id": 3,
+        "gender": "women",
+        "category": "jewelery",
+        "subcategory": "bracelets",
+        "image": "https://m.media-amazon.com/images/G/01/Shopbop/p/prod/products/khiry/khiry3001311784/khiry3001311784_1651507324715_2-0._QL90_UX414_.jpg",
+        "brand": "KHIRY",
+        "title": "Khartoum Stacking Bracelet",
+        "price": 16450
+      },
+      {
+        "id": 4,
+        "gender": "women",
+        "category": "clothing",
+        "subcategory": "dress",
+        "image": "https://m.media-amazon.com/images/G/01/Shopbop/p/prod/products/aelmy/aelmy30000102c8/aelmy30000102c8_1651509253747_2-0._QL90_UX414_.jpg",
+        "brand": "Arianne Elmy",
+        "title": "Green Good Luck Dress",
+        "price": 25623
+      },
+      {
+        "id": 5,
+        "gender": "women",
+        "category": "shoes",
+        "subcategory": "sneakers",
+        "image": "https://m.media-amazon.com/images/G/01/Shopbop/p/prod/products/cpari/cpari3002818ab4/cpari3002818ab4_1651266221354_2-0._QL90_UX564_.jpg",
+        "brand": "Chelsea Paris",
+        "title": "Claude Loafers",
+        "price": 34431
+      },
+      {
+        "id": 6,
+        "gender": "women",
+        "category": "clothing",
+        "subcategory": "dress",
+        "image": "https://m.media-amazon.com/images/G/01/Shopbop/p/prod/products/abcxi/abcxi3002225375/abcxi3002225375_1651155337238_2-0._QL90_UX564_.jpg",
+        "brand": "Abacaxi",
+        "title": "Eva Dress",
+        "price": 29458
+      },
+      {
+        "id": 7,
+        "gender": "women",
+        "category": "clothing",
+        "subcategory": "tops",
+        "image": "https://m.media-amazon.com/images/G/01/Shopbop/p/prod/products/abcxi/abcxi300201c3c8/abcxi300201c3c8_1651265198425_2-0._QL90_UX564_.jpg",
+        "brand": "Abacaxi",
+        "title": "Scarf Hem Unisex Shirt",
+        "price": 29458
+      },
+      {
+        "id": 8,
+        "gender": "women",
+        "category": "clothing",
+        "subcategory": "shorts",
+        "image": "https://m.media-amazon.com/images/G/01/Shopbop/p/prod/products/abcxi/abcxi300251c3c8/abcxi300251c3c8_1651265201071_2-0._QL90_UX564_.jpg",
+        "brand": "Abacaxi",
+        "title": "DrawString Shorts",
+        "price": 12624
+      },
+      {
+        "id": 9,
+        "gender": "women",
+        "category": "clothing",
+        "subcategory": "dress",
+        "image": "https://m.media-amazon.com/images/G/01/Shopbop/p/prod/products/abcxi/abcxi300241c3c8/abcxi300241c3c8_1651262884933_2-0._QL90_UX564_.jpg",
+        "brand": "Abacaxi",
+        "title": "Mini Eva Dress",
+        "price": 34431
+      },
+      {
+        "id": 10,
+        "gender": "women",
+        "category": "bags",
+        "subcategory": "totes",
+        "image": "https://m.media-amazon.com/images/G/01/Shopbop/p/prod/products/yvonk/yvonk3001112955/yvonk3001112955_1643816436316_2-0._QL90_UX564_.jpg",
+        "brand": "Yvonne Kone",
+        "title": "Large Filippo Tote",
+        "price": 62742
+      },
+      {
+        "id": 11,
+        "gender": "women",
+        "category": "bags",
+        "subcategory": "tops",
+        "image": "https://m.media-amazon.com/images/G/01/Shopbop/p/prod/products/stdon/stdon300171d6dc/stdon300171d6dc_1647353806465_2-0._QL90_UX564_.jpg",
+        "brand": "Studio 189",
+        "title": "Technicolor Ruffle Top",
+        "price": 21041
+      },
+      {
+        "id": 12,
+        "gender": "women",
+        "category": "clothing",
+        "subcategory": "jeans",
+        "image": "https://m.media-amazon.com/images/G/01/Shopbop/p/prod/products/gamer/gamer304581d628/gamer304581d628_1648244994931_2-0._QL90_UX564_.jpg",
+        "brand": "Good American",
+        "title": "Mom Jeans",
+        "price": 11400
+      },
+      {
+        "id": 13,
+        "gender": "women",
+        "category": "clothing",
+        "subcategory": "tops",
+        "image": "https://m.media-amazon.com/images/G/01/Shopbop/p/prod/products/elexi/elexi3000311236/elexi3000311236_1646847217999_2-0._QL90_UX564_.jpg",
+        "brand": "Elexiay",
+        "title": "Marisol Top",
+        "price": 15303
+      },
+      {
+        "id": 14,
+        "gender": "women",
+        "category": "clothing",
+        "subcategory": "skirts",
+        "image": "https://m.media-amazon.com/images/G/01/Shopbop/p/prod/products/elexi/elexi3000411236/elexi3000411236_1646847206405_2-0._QL90_UX564_.jpg",
+        "brand": "Elexiay",
+        "title": "Marisol Skirt",
+        "price": 15303
+      }
+    ],
+  
+    "bestSellerData": [
+      {
+        "id": 1,
+        "gender": "women",
+        "category": "clothing",
+        "subcategory": "shorts",
+        "image": "https://m.media-amazon.com/images/G/01/Shopbop/p/prod/products/agole/agole3049067425/agole3049067425_q1_2-1._QL90_UX564_.jpg",
+        "brand": "AGOLDE",
+        "title": "Parker Long Vintage Shorts",
+        "price": 10559
+      },
+      {
+        "id": 2,
+        "gender": "women",
+        "category": "clothing",
+        "subcategory": "tops",
+        "image": "https://m.media-amazon.com/images/G/01/Shopbop/p/prod/products/freep/freep4507012397/freep4507012397_q1_2-0._QL90_UX564_.jpg",
+        "brand": "Free People",
+        "title": "U Neck Tank",
+        "price": 1530
+      },
+      {
+        "id": 3,
+        "gender": "women",
+        "category": "clothing",
+        "subcategory": "shorts",
+        "image": "https://m.media-amazon.com/images/G/01/Shopbop/p/prod/products/agole/agole306191d3f9/agole306191d3f9_1645820724272_2-0._QL90_UX564_.jpg",
+        "brand": "AGOLDE",
+        "title": "Parker Vintage Shorts",
+        "price": 10559
+      },
+      {
+        "id": 4,
+        "gender": "women",
+        "category": "clothing",
+        "subcategory": "coats",
+        "image": "https://m.media-amazon.com/images/G/01/Shopbop/p/prod/products/lione/lione300181071b/lione300181071b_q1_2-0._QL90_UX564_.jpg",
+        "brand": "Lioness",
+        "title": "Palermo Blazer",
+        "price": 7268
+      },
+      {
+        "id": 5,
+        "gender": "women",
+        "category": "clothing",
+        "subcategory": "shorts",
+        "image": "https://m.media-amazon.com/images/G/01/Shopbop/p/prod/products/agole/agole304891aee2/agole304891aee2_q1_2-0._QL90_UX564_.jpg",
+        "brand": "AGOLDE",
+        "title": "Parker Long Loose Shorts",
+        "price": 10559
+      },
+      {
+        "id": 6,
+        "gender": "women",
+        "category": "clothing",
+        "subcategory": "shorts",
+        "image": "https://m.media-amazon.com/images/G/01/Shopbop/p/prod/products/agole/agole3049194407/agole3049194407_q1_2-0._QL90_UX564_.jpg",
+        "brand": "AGOLDE",
+        "title": "Parker Loose Vintage Shorts",
+        "price": 9793
+      },
+      {
+        "id": 7,
+        "gender": "women",
+        "category": "clothing",
+        "subcategory": "jeans",
+        "image": "https://m.media-amazon.com/images/G/01/Shopbop/p/prod/products/mothr/mothr210691733b/mothr210691733b_q1_2-0._QL90_UX564_.jpg",
+        "brand": "MOTHER",
+        "title": "The Hustler Fray Jeans",
+        "price": 15149
+      },
+      {
+        "id": 8,
+        "gender": "women",
+        "category": "clothing",
+        "subcategory": "shorts",
+        "image": "https://m.media-amazon.com/images/G/01/Shopbop/p/prod/products/agole/agole3006267425/agole3006267425_q1_2-0._QL90_UX564_.jpg",
+        "brand": "AGOLDE",
+        "title": "Parker Loose Vintage Shorts",
+        "price": 10559
+      },
+      {
+        "id": 9,
+        "gender": "women",
+        "category": "shoes",
+        "subcategory": "sneakers",
+        "image": "https://m.media-amazon.com/images/G/01/Shopbop/p/prod/products/nwbal/nwbal305041cb15/nwbal305041cb15_1650484263665_2-0._QL90_UX564_.jpg",
+        "brand": "New Balance",
+        "title": "327 Sneakers",
+        "price": 7651
+      },
+      {
+        "id": 10,
+        "gender": "women",
+        "category": "clothing",
+        "subcategory": "tops",
+        "image": "https://m.media-amazon.com/images/G/01/Shopbop/p/prod/products/madew/madew4513611160/madew4513611160_q1_2-0._QL90_UX564_.jpg",
+        "brand": "Madewell",
+        "title": "Whisper Cotton V Neck Tank",
+        "price": 1415
+      },
+      {
+        "id": 11,
+        "gender": "women",
+        "category": "clothing",
+        "subcategory": "jeans",
+        "image": "https://m.media-amazon.com/images/G/01/Shopbop/p/prod/products/agole/agole30211133fd/agole30211133fd_q1_2-0._QL90_UX564_.jpg",
+        "brand": "AGOLDE",
+        "title": "Riley High Rise Straight Crop Jeans",
+        "price": 15149
+      },
+      {
+        "id": 12,
+        "gender": "women",
+        "category": "clothing",
+        "subcategory": "jeans",
+        "image": "https://m.media-amazon.com/images/G/01/Shopbop/p/prod/products/leviv/leviv205041569e/leviv205041569e_q1_2-0._QL90_UX564_.jpg",
+        "brand": "Levi's",
+        "title": "501 Skinny Jeans",
+        "price": 7498
+      },
+      {
+        "id": 13,
+        "gender": "women",
+        "category": "clothing",
+        "subcategory": "jeans",
+        "image": "https://m.media-amazon.com/images/G/01/Shopbop/p/prod/products/agole/agole301741217e/agole301741217e_q1_2-0._QL90_UX564_.jpg",
+        "brand": "AGOLDE",
+        "title": "Pinch Waist High Rise Kick Jeans",
+        "price": 13619
+      },
+      {
+        "id": 14,
+        "gender": "women",
+        "category": "clothing",
+        "subcategory": "dress",
+        "image": "https://m.media-amazon.com/images/G/01/Shopbop/p/prod/products/wayfa/wayfa2039113149/wayfa2039113149_q1_2-0._QL90_UX346_.jpg",
+        "brand": "WAYF",
+        "title": "Plaza Cut Out Tiered Maxi Dress",
+        "price": 11324
+      },
+      {
+        "id": 15,
+        "gender": "women",
+        "category": "clothing",
+        "subcategory": "jeans",
+        "image": "https://m.media-amazon.com/images/G/01/Shopbop/p/prod/products/agole/agole3008782126/agole3008782126_q1_2-21._QL90_UX564_.jpg",
+        "brand": "Agolde",
+        "title": "90s Fit High Rise Loose Fit Jeans",
+        "price": 15149
+      }
+    ]
+  }

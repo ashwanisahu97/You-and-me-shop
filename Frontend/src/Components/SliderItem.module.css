@@ -1,0 +1,28 @@
+.itemContainer{
+    aspect-ratio:101 / 214;
+    padding:1rem;
+}
+
+.itemimg{
+    width:100%;
+    height:95%;
+}
+
+.itemImg img{
+    width:95%;
+    margin:auto;
+    height:100%;
+    object-fit:cover;
+}
+
+.itemInfo > p{
+    margin:0.5vh;
+    line-height:1.6;
+    font-size:0.9vw;
+    font-weight:700;
+    text-align:center;
+}
+
+.itemInfo .title{
+    font-weight:500;
+}
