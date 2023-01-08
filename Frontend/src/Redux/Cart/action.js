@@ -59,11 +59,11 @@ export const deleteFromCartFailure = () => {
     }
 }
 
-export const deleteFromCart = () => (dispatch) => { 
+export const deleteFromCart = (id) => (dispatch) => { 
         dispatch(deleteFromCartRequest());
-    axios.delete("http://localhost:8080/cart").then(({ data}) => { 
+    axios.delete(`http://localhost:8080/cart/${id}`).then(({ data}) => { 
         console.log("data", data)
-        dispatch(deleteFromCartSuccess(data))
+        dispatch(deleteFromCartSuccess())
     }).catch(() => { 
         dispatch(deleteFromCartFailure())
     })
