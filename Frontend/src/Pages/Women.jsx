@@ -1,13 +1,9 @@
-import { Box, Image,Text,Flex, Grid } from '@chakra-ui/react';
 import React, { useEffect } from 'react'
 import { useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { fetchData } from '../Redux/Product/action';
-import { useNavigate } from 'react-router-dom';
-
 const Men = () => {
   const dispatch = useDispatch();
-  const navigate = useNavigate();
   const [womensData,setwomensData]=useState([])
   const loading=useSelector((store)=>store.product.loading)
   const products=useSelector((store)=>store.product.data)
