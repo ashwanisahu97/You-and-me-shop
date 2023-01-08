@@ -1,4 +1,9 @@
-import React from 'react'
+import { Box, Image,Text,Flex, Grid } from '@chakra-ui/react';
+import React, { useEffect } from 'react'
+import { useState } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
+import { fetchData } from '../Redux/Product/action';
+import { useNavigate } from 'react-router-dom';
 
 const ProductSimple = () => {
   return (
