@@ -7,7 +7,7 @@ const ProductSimple = ({ loading, error, data }) => {
   return (
     <Grid gridGap={"30px"} templateColumns={"repeat(4,1fr)"} position={"relative"} top={ "100px"}>
       {
-        loading ? <Center textAlign={"center"} color="red" m={ "auto"}>Data is loading </Center> : error ? <Text color="red" m={ "auto"}>Something went wrong,please try again</Text> :
+              loading ? <Text border={"1px solid red"} w={ "200px"} mx="auto" color="red">Data is loading </Text> : error ? <Text color="red" m={ "auto"}>Something went wrong,please try again</Text> :
           data?.map((element) => { 
             return (
               <Box onClick={() => {
