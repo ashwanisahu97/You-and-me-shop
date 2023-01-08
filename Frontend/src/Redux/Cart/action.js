@@ -63,6 +63,7 @@ export const deleteFromCart = (id) => (dispatch) => {
         dispatch(deleteFromCartRequest());
     axios.delete(`http://localhost:8080/cart/${id}`).then(({ data}) => { 
         console.log("data", data)
+        alert("deleted from cart");
         dispatch(deleteFromCartSuccess())
     }).catch(() => { 
         dispatch(deleteFromCartFailure())

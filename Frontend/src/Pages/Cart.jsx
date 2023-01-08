@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { getFromCart } from "../Redux/Cart/action";
+import { deleteFromCart, getFromCart } from "../Redux/Cart/action";
 import {
   Box,
   Button,
@@ -25,6 +25,9 @@ const Cart = () => {
   useEffect(() => {
     dispatch(getFromCart());
   }, []);
+  const handleDelete = (id) =.{ 
+    dispatch(deleteFromCart(id));
+  }
   console.log("cartData", cartData);
 
   return (
@@ -136,6 +139,7 @@ const Cart = () => {
                 </Button>
 
             <Button
+            onClick={handleDelete}
               fontSize={"xl"}
              w="350px"
              h="60px"
