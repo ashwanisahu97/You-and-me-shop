@@ -9,8 +9,8 @@ import Electronics from '../Pages/Electronics'
 import Jewelery from '../Pages/Jewelery'
 import Cart from '../Pages/Cart'
 import Wishlist from '../Pages/Wishlist'
-import ProductDetails from '../Pages/ProductDetails'
 import Home from './Home'
+import ProductDetails from '../Pages/ProductDetails'
 
 const AllRoutes = () => {
   return (
