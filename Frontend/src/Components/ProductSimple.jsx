@@ -5,12 +5,12 @@ import { useDispatch, useSelector } from 'react-redux';
 import { fetchData } from '../Redux/Product/action';
 import { useNavigate } from 'react-router-dom';
 
-const ProductSimple = () => {
+const ProductSimple = ({ loading,error,data}) => {
   return (
     <Grid gridGap={"30px"} templateColumns={"repeat(4,1fr)"} position={"relative"} top={ "100px"}>
       {
         loading ? <Text textAlign={"center"} color="red" m={ "auto"}>Data is loading</Text> : error ? <Text color="red" m={ "auto"}>Something went wrong,please try again</Text> :
-          mensData?.map((element) => { 
+          data?.map((element) => { 
             return (
               <Box onClick={() => {
                 navigate(`/productDetails/${element.id}`)
