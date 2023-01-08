@@ -10,6 +10,7 @@ import Jewelery from '../Pages/Jewelery'
 import Cart from '../Pages/Cart'
 import Wishlist from '../Pages/Wishlist'
 import ProductDetails from '../Pages/ProductDetails'
+import Home from './Home'
 
 const AllRoutes = () => {
   return (
@@ -24,6 +25,7 @@ const AllRoutes = () => {
           <Route path="/signup" element={ <Signup/>}></Route>
           <Route path="/cart" element={ <Cart/>}></Route>
           <Route path="/wishlist" element={ <Wishlist/>}></Route>
+          <Route path="/home" element={ <Home/>}></Route>
    </Routes>
   )
 }

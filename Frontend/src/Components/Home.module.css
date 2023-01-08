@@ -165,17 +165,19 @@
 }
 
 .smalltronThree{
-    width:60%;
+    width:83%;
     margin:auto;
-    aspect-ratio: 75 / 32;
-    background:url('https://media.istockphoto.com/id/1193864172/vector/flash-sale-banner-template-special-offer-for-big-sales.jpg?s=1024x1024&w=is&k=20&c=FRuPlZSLdCNkB7PhGzltaxF1UNBN9Yle7WRZhteRFo4=');
+    padding-top: 100px;
+    /* aspect-ratio: 100 / 100; */
+    height:600px;
+    background:url('https://as2.ftcdn.net/v2/jpg/02/10/60/47/1000_F_210604798_L1oeENismr3DpyhYGd9mMT8WhNcuqoi1.jpg');
     background-repeat: repeat;
     background-size: contain;
     display:grid;
     align-items: center;
     justify-content: start;
     color:white;
-    object-fit:fill
+    border:3px solid green;
 }
 
 .smalltronThree > .smalltronInfo{
