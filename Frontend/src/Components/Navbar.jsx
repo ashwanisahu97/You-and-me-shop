@@ -42,10 +42,10 @@ const Navbar = () => {
           <Box><Link to="/login">Login</Link></Box>
         <Box><Link to="/signup">Signup</Link></Box>
         <Box>
-       <Link to="/cart"><BsCartFill /></Link>
+       <Link to="/cart"><BsCartFill fontSize={"30px"} /></Link>
           </Box>
         <Box> <Box ref={btnRef} color='red' onClick={onOpen}>
-        <AiOutlineHeart/>
+        <AiOutlineHeart fontSize={"30px"}/>
         </Box>
           <Drawer
             w="400px"
@@ -94,10 +94,10 @@ const Navbar = () => {
           </DrawerBody>
 
           <DrawerFooter>
-            <Button variant='outline' mr={3} onClick={onClose}>
+            <Button colorScheme='blue' variant='primary' mr={3} onClick={onClose}>
               Cancel
             </Button>
-            <Button colorScheme='blue'>Save</Button>
+            {/* <Button colorScheme='blue'>Save</Button> */}
           </DrawerFooter>
         </DrawerContent>
       </Drawer></Box>
