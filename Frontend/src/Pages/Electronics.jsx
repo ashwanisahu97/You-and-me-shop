@@ -1,4 +1,4 @@
-import { Box, Image,Text,Flex, Grid } from '@chakra-ui/react';
+import { Box, Image,Text,Flex, Grid, Select } from '@chakra-ui/react';
 import React, { useEffect } from 'react'
 import { useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
@@ -22,9 +22,31 @@ const Electronics = () => {
     })
     console.log("electronicsWear",electronicsWear)
     setElectronicsData(electronicsWear)
-  },[products.length])
+  }, [products.length])
+  
+  const sortbyPrice = (e) => { 
+    let sortValue = e.target.value;
+    console.log(sortValue);
+    let temp = [...electronicsData];
+    if (sortValue === "lth") {
+      temp.sort((a,b)=>a.price-b.price);
+    } else { 
+      temp.sort((a,b)=>b.price-a.price)
+    }
+    setElectronicsData(temp);
+  }
   
   return (
+    <Box>
+      <Flex zIndex={"20"} pt="50px" justifyContent="center" alignItems="center">
+          <Box pt="7px" position={"fixed"} zIndex={"10"}>
+            <Select fontSize={"22px"} onChange={sortbyPrice}>
+              <option>Select by price</option>
+              <option value="lth">low to high</option>
+              <option value="htl">high to low</option>
+            </Select>
+      </Box>
+          </Flex>
     <Grid gridGap={"30px"} templateColumns={"repeat(5,1fr)"} position={"relative"} top={"100px"}>
     {
       loading ? <Text w={"200px"} mx="auto" color="red">Data is loading </Text> : error ? <Text color="red" mx={"auto"}>Something went wrong,please try again</Text> :
@@ -34,7 +56,8 @@ const Electronics = () => {
           )
         })
     }
-    </Grid>
+      </Grid>
+      </Box>
   )
   
 }
