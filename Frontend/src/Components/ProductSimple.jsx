@@ -2,14 +2,9 @@ import { Box, Image,Text,Flex, Grid, Center } from '@chakra-ui/react';
 import React, { useEffect } from 'react'
 import { useNavigate } from 'react-router-dom';
 
-const ProductSimple = ({ loading, error, data }) => {
+const ProductSimple = ({ element}) => {
     const navigate = useNavigate();
   return (
-    <Grid gridGap={"30px"} templateColumns={"repeat(4,1fr)"} position={"relative"} top={ "100px"}>
-      {
-              loading ? <Text w={ "200px"} mx="auto" color="red">Data is loading </Text> : error ? <Text color="red" mx={ "auto"}>Something went wrong,please try again</Text> :
-          data?.map((element) => { 
-            return (
               <Box onClick={() => {
                 navigate(`/productDetails/${element.id}`)
               }} key={element.id} boxShadow={"rgba(100, 100, 111, 0.2) 0px 7px 29px 0px"} mb={"15px"} borderRadius={"10px"}>
@@ -35,10 +30,6 @@ const ProductSimple = ({ loading, error, data }) => {
              </Box> */}
               </Box>
             )
-          })
-      }
-    </Grid>
-  )
 }
 
 export default ProductSimple
