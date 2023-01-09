@@ -20,14 +20,14 @@ import { ViewIcon, ViewOffIcon } from '@chakra-ui/icons';
 const Signup = () => {
   const [showPassword, setShowPassword] = useState(false);
   return (
-    <Box  boxShadow={'lg'} rounded={'lg'} borderRadius="10px" w={["full", "md"]} mx={"auto"} position="relative" top={'100px'} p={"10px"} >
+    <Box  boxShadow={'lg'} rounded={'lg'} borderRadius="10px" w={["full", "md"]} mx={"auto"} position="relative" top={'50px'} p={"5px"} >
  
         <Flex
-      minH={'100vh'}
+      minH={'90vh'}
       align={'center'}
       justify={'center'}
       bg={useColorModeValue('gray.50', 'gray.800')}>
-      <Stack spacing={8} mx={'auto'} maxW={'lg'} py={12} px={6}>
+      <Stack spacing={8} mx={'auto'} maxW={'lg'} py={5} px={6}>
         <Stack align={'center'}>
           <Heading fontSize={'4xl'} textAlign={'center'}>
             Sign up
