@@ -8,9 +8,11 @@ const Login = () => {
         <Heading  mb="25px" textAlign={"center"}> Login to your account</Heading>
    
       <Flex flexDirection={"column"}>
-        <FormControl isRequired>
+        <FormControl>
           <FormLabel>Email address</FormLabel>
-          <Input type="email" isRequired/>
+          <Input type="email" isRequired />
+        </FormControl>
+        <FormControl>
           <FormLabel mt="10px">Password</FormLabel>
           <Input type="password" isRequired/>
           </FormControl>
