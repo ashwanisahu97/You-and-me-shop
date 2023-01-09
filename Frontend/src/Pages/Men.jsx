@@ -43,7 +43,7 @@ const Men = () => {
   console.log("sort value", sort);
   return (
    <Box>
-    <Flex zIndex={"20"} pt="30px" justifyContent="center" alignItems="center">
+    <Flex zIndex={"20"} pt="50px" justifyContent="center" alignItems="center">
           <Box pt="7px" position={"fixed"} zIndex={"10"}>
             <Select fontSize={"22px"} onChange={sortbyPrice}>
               <option>Select by price</option>
@@ -52,7 +52,7 @@ const Men = () => {
             </Select>
       </Box>
           </Flex>
-    <Grid gridGap={"30px"} templateColumns={"repeat(4,1fr)"} position={"relative"} top={"100px"}>
+    <Grid gridGap={"30px"} templateColumns={"repeat(5,1fr)"} position={"absolute"} top={"100px"}>
     {
       loading ? <Text w={"200px"} mx="auto" color="red">Data is loading </Text> : error ? <Text color="red" mx={"auto"}>Something went wrong,please try again</Text> :
         mensData?.map((element) => {

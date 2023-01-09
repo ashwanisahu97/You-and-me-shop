@@ -8,8 +8,8 @@ const ProductSimple = ({ element}) => {
               <Box onClick={() => {
                 navigate(`/productDetails/${element.id}`)
               }} key={element.id} boxShadow={"rgba(100, 100, 111, 0.2) 0px 7px 29px 0px"} mb={"15px"} borderRadius={"10px"}>
-                <Box h={ "340px"}><Image w={"90%"} mx="5%" h={ "100%"} src={element.image}></Image></Box>
-                <Box fontSize={"lg"} p={"10px"} h={"150px"}>
+                <Box h={ "340px"}><Image w={"80%"} mx="auto" h={ "90%"} src={element.image}></Image></Box>
+                <Box fontSize={"lg"} p={"10px"} h={"150px"} boxSizing="border-box">
                   <Text textAlign={"center"} boxSizing='border-box' px="5px" borderRadius={'5px'} w="80px" bg={"yellow"} color={"grey.500"}>BRAND</Text>
                   <Text h="65px" overflow={'hidden'} fontWeight={"bold"} fontSize="xl">{element.title}</Text>
                   <Flex gap={10}>
