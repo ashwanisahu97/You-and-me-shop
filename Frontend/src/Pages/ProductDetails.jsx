@@ -78,7 +78,7 @@ const ProductDetails = () => {
           <Text> Add To Wishlist </Text>
         </Flex>
       </Flex>
-      <WishlistDrawer isOpen={isOpen} onOpen={onOpen} onClose={onClose} />
+      <WishlistDrawer isOpen={isOpen} onOpen={onOpen} onClose={onClose} btnRef={ btnRef} />
       </Box>
   )
 }

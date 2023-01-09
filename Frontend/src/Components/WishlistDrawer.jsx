@@ -16,7 +16,7 @@ import { AiOutlineHeart } from "react-icons/ai"
 import { useDispatch, useSelector } from 'react-redux'
 import { getFromCart } from '../Redux/Cart/action'
 import Wishlist from '../Pages/Wishlist'
-const WishlistDrawer = () => {
+const WishlistDrawer = ({ isOpen, onOpen, onClose,btnRef}) => {
   // const { isOpen, onOpen, onClose } = useDisclosure();
   const navigate = useNavigate();
   const dispatch = useDispatch();
