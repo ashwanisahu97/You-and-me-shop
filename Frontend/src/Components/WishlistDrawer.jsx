@@ -21,8 +21,8 @@ const WishlistDrawer = ({ isOpen, onOpen, onClose,btnRef}) => {
   const navigate = useNavigate();
   const dispatch = useDispatch();
   const [searchInput, setSearchInput] = useState("");
-  const { isOpen, onOpen, onClose } = useDisclosure()
-  const btnRef = React.useRef()
+//   const { isOpen, onOpen, onClose } = useDisclosure()
+//   const btnRef = React.useRef()
   const cartData=useSelector((store)=>store.cart.cart)
   useEffect(() => { 
   dispatch(getFromCart())
