@@ -21,30 +21,28 @@ const Men = () => {
   }, [])
 
   useEffect(() => { 
-    if (products) {
+    if (products.length!==0) {
       const mensWear = products?.filter((element) => {
         return element.category === "mens";
       })
       console.log("mensWear", mensWear)
       setMensData(mensWear)
     }
-  }, [])
-  // useEffect(() => {
-  //   if (mensData) {
-  //     let sortData = [...mensData]
-  //     if (sort === "lth") {
-  //       sortData = mensData.sort((a, b) => {
-  //         return b.price - a.price;
-  //       })
-  //     } else if(sort === "htl") {
-  //       sortData = mensData.sort((a, b) => {
-  //         return a.price - b.price;
-  //       }
-  //       )
-  //     }
-  //     setMensData(sortData);
-  //   }
-  //  },[])
+  }, [products?.length])
+  useEffect(() => {
+      let sortData = [...mensData]
+      if (sort === "lth") {
+        sortData.sort((a, b) => {
+          return b.price - a.price;
+        })
+      } else if(sort === "htl") {
+        sortData.sort((a, b) => {
+          return a.price - b.price;
+        }
+        )
+      }
+      setMensData(sortData);
+   },[sort,setSort])
   console.log("sort value", sort);
   return (
    <Box>
