@@ -43,17 +43,14 @@ const Men = () => {
   console.log("sort value", sort);
   return (
    <Box>
-    <Flex zIndex={"20"} pt="30px" border={"2px solid green"} justifyContent="center" alignItems="center">
- <Flex>
+    <Flex zIndex={"20"} pt="30px" justifyContent="center" alignItems="center">
           <Box pt="7px" position={"fixed"} zIndex={"10"}>
-            <Select fontSize={"20px"} onChange={sortbyPrice}>
+            <Select fontSize={"22px"} onChange={sortbyPrice}>
               <option>Select by price</option>
               <option value="lth">low to high</option>
               <option value="htl">high to low</option>
             </Select>
       </Box>
-          {/* <Input position={"fixed"} border={"1px solid red"} zIndex={"10"} value={searchInput} onChange={(e) => setSearchInput(e.target.value)} fontSize={"xl"} pl={"30px"} type={"text"} placeholder={`What are you looking for`} w={"300px"}></Input> */}
-          </Flex>
           </Flex>
     <Grid gridGap={"30px"} templateColumns={"repeat(4,1fr)"} position={"relative"} top={"100px"}>
     {
