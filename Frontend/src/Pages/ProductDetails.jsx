@@ -4,7 +4,8 @@ import {
   Text,
   Image,
   Flex,
-  Icon
+  Icon,
+  useDisclosure
 } from '@chakra-ui/react';
 import { useDispatch, useSelector } from 'react-redux';
 import { fetchData} from '../Redux/Product/action';
@@ -12,10 +13,13 @@ import {useNavigate, useParams } from 'react-router-dom';
 import { addToCart } from '../Redux/Cart/action';
 import {BsCartFill} from "react-icons/bs"
 import { AiFillStar, AiOutlineHeart } from "react-icons/ai"
+import WishlistDrawer from '../Components/WishlistDrawer';
 const ProductDetails = () => {
   const dispatch = useDispatch();
   const navigate = useNavigate();
   const { id } = useParams();
+  const { isOpen, onOpen, onClose } = useDisclosure()
+  const btnRef = React.useRef()
   const products = useSelector(store => store.product.data);
   const [singleProduct, setSingleProduct] = useState({});
   // const { title, price, description, rating, category,image } = singleProduct; 
@@ -70,10 +74,11 @@ const ProductDetails = () => {
         <Flex onClick={() => {
           navigate("/wishlist")
         }} backgroundColor={"teal"} _hover={{cursor:"pointer",bg:"red"}} color="white" gap="10px" justifyContent="center" borderRadius="10px" border="1px solid green" alignItems="center" fontSize={"2xl"}  w={"45%"}>
-          <Box><AiOutlineHeart/></Box>
+          <Box ref={btnRef} color='red' onClick={onOpen}><AiOutlineHeart/></Box>
           <Text> Add To Wishlist </Text>
         </Flex>
       </Flex>
+      <WishlistDrawer isOpen={isOpen} onOpen={onOpen} onClose={onClose} />
       </Box>
   )
 }
