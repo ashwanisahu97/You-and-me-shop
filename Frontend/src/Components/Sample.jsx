@@ -1,6 +1,6 @@
 import { Box, FormControl, Grid, Input } from '@chakra-ui/react';
 import React, { useEffect, useState } from 'react'
-import SearchFilter from 'react-filter-search';
+// import SearchFilter from 'react-filter-search';
 import { useDispatch, useSelector } from 'react-redux';
 import { store } from '../Redux/store';
 import { fetchData } from '../Redux/Product/action';
@@ -24,7 +24,7 @@ const Sample = () => {
                             value={searchInput}
                             onChange={(e)=> setSearchInput(e.target.value)}
           />
-          <SearchFilter 
+          {/* <SearchFilter 
                     value={searchInput}
                     data={products}
                     renderResults={results =>(
@@ -34,7 +34,7 @@ const Sample = () => {
                             ))}
                         </Grid>
                     )}
-                />
+                /> */}
     </Box>
   )
 }

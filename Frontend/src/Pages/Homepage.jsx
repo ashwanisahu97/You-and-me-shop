@@ -4,7 +4,6 @@ import { fetchData } from '../Redux/Product/action';
 import ProductSimple from '../Components/ProductSimple';
 import { Box, Flex, Grid ,Input,Text} from '@chakra-ui/react';
 import { AiOutlineSearch } from "react-icons/ai"
-import ReactSearchBox from "react-search-box";
 const Homepage = () => {
   const dispatch = useDispatch();
   const loading=useSelector((store)=>store.product.loading)
@@ -27,19 +26,15 @@ const Homepage = () => {
           </Flex>
           </Flex>
     <Box position={"absolute"} top={"100px"} >
-      {
-        loading ? <Text w={"200px"} mx="auto" color="red">Data is loading </Text> : error ? <Text color="red" mx={"auto"}>Something went wrong,please try again</Text> :
-        <ReactSearchBox
-        value={searchInput}
-        data={products}
-        callback={results =>(
+        {
+          loading ? <Text w={"200px"} mx="auto" color="red">Data is loading </Text> : error ? <Text color="red" mx={"auto"}>Something went wrong,please try again</Text> :
             <Grid gridGap={"30px"} templateColumns={"repeat(4,1fr)"} >
-                {results.map((item, i)=>(
-                    <ProductSimple element={item} key={i} />
-                ))}
+              {
+                products.map((item, i) => (
+                  <ProductSimple element={item} key={i} />
+                ))
+              }
             </Grid>
-        )}
-    />
       }
       </Box>
       </Box>
