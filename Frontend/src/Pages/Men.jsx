@@ -29,27 +29,24 @@ const Men = () => {
       setMensData(mensWear)
     }
   }, [products.length])
-  // useEffect(() => {
-  //     let sortData = [...mensData]
-  //     if (sort === "lth") {
-  //       sortData = mensData.sort((a, b) => {
-  //         return b.price - a.price;
-  //       })
-  //     } else if(sort === "htl") {
-  //       sortData = mensData.sort((a, b) => {
-  //         return a.price - b.price;
-  //       }
-  //       )
-  //     }
-  //     setMensData(sortData);
-  //  },[sort])
+  const sortbyPrice = (e) => { 
+    let sortValue = e.target.value;
+    console.log(sortValue);
+    let temp = [...mensData];
+    if (sortValue === "lth") {
+      temp.sort((a,b)=>a.price-b.price);
+    } else { 
+      temp.sort((a,b)=>b.price-a.price)
+    }
+    setMensData(temp);
+  }
   console.log("sort value", sort);
   return (
    <Box>
     <Flex zIndex={"20"} pt="30px" border={"2px solid green"} ml="600px" alignItems="center">
  <Flex>
           <Box pt="7px" position={"fixed"} zIndex={"10"}>
-            <Select onChange={ (e)=>setSort(e.target.value)}>
+            <Select fontSize={"20px"} onChange={sortbyPrice}>
               <option>Select by price</option>
               <option value="lth">low to high</option>
               <option value="htl">high to low</option>
