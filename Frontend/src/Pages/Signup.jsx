@@ -1,7 +1,24 @@
-import { Box, Button, Checkbox, Flex, FormControl, FormLabel, HStack, Heading, Input, Link, Stack, Text, VStack } from '@chakra-ui/react'
-import React from 'react'
+import {
+  Flex,
+  Box,
+  FormControl,
+  FormLabel,
+  Input,
+  InputGroup,
+  HStack,
+  InputRightElement,
+  Stack,
+  Button,
+  Heading,
+  Text,
+  useColorModeValue,
+  Link,
+} from '@chakra-ui/react';
+import { useState } from 'react';
+import { ViewIcon, ViewOffIcon } from '@chakra-ui/icons';
 
 const Signup = () => {
+  const [showPassword, setShowPassword] = useState(false);
   return (
     <Box  boxShadow={'lg'} rounded={'lg'} borderRadius="10px" w={["full", "md"]} mx={"auto"} position="relative" top={'100px'} p={"10px"} >
  

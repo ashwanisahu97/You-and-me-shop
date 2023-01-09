@@ -21,10 +21,10 @@ const Login = () => {
              <Button>Forgot your password?</Button>
           </Flex>
           <Button  mt="20px" type={ "submit"}
-                  bg={'blue.400'}
+                  bg={'teal.400'}
                   color={'white'}
                   _hover={{
-                    bg: 'blue.700',
+                    bg: 'blue.400',
                   }}>
                   Sign in
                 </Button>

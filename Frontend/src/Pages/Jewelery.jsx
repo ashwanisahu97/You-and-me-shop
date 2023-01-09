@@ -12,7 +12,9 @@ const Jewelery = () => {
   const products=useSelector((store)=>store.product.data)
   const error=useSelector((store)=>store.product.error)
   useEffect(() => { 
-    dispatch(fetchData())
+    if (products.length === 0) {
+      dispatch(fetchData())
+    }
   }, [])
 
   useEffect(() => { 
