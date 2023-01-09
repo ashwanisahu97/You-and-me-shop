@@ -28,21 +28,21 @@ const Men = () => {
       console.log("mensWear", mensWear)
       setMensData(mensWear)
     }
-  }, [products?.length])
-  useEffect(() => {
-      let sortData = [...mensData]
-      if (sort === "lth") {
-        sortData.sort((a, b) => {
-          return b.price - a.price;
-        })
-      } else if(sort === "htl") {
-        sortData.sort((a, b) => {
-          return a.price - b.price;
-        }
-        )
-      }
-      setMensData(sortData);
-   },[sort,setSort])
+  }, [products.length])
+  // useEffect(() => {
+  //     let sortData = [...mensData]
+  //     if (sort === "lth") {
+  //       sortData = mensData.sort((a, b) => {
+  //         return b.price - a.price;
+  //       })
+  //     } else if(sort === "htl") {
+  //       sortData = mensData.sort((a, b) => {
+  //         return a.price - b.price;
+  //       }
+  //       )
+  //     }
+  //     setMensData(sortData);
+  //  },[sort])
   console.log("sort value", sort);
   return (
    <Box>
