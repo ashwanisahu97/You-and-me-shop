@@ -1,8 +1,10 @@
-import { Box, FormControl } from '@chakra-ui/react';
-import React, { useEffect } from 'react'
+import { Box, FormControl, Grid, Input } from '@chakra-ui/react';
+import React, { useEffect, useState } from 'react'
 import SearchFilter from 'react-filter-search';
 import { useDispatch, useSelector } from 'react-redux';
 import { store } from '../Redux/store';
+import { fetchData } from '../Redux/Product/action';
+import ProductSimple from './ProductSimple';
 
 const Sample = () => {
     const dispatch = useDispatch();
@@ -17,7 +19,7 @@ const Sample = () => {
       console.log("products",products)
   return (
       <Box position="relative" top="100px">
-           <FormControl 
+           <Input border={"2px solid red"} 
                             placeholder="Search"
                             value={searchInput}
                             onChange={(e)=> setSearchInput(e.target.value)}
@@ -26,11 +28,11 @@ const Sample = () => {
                     value={searchInput}
                     data={products}
                     renderResults={results =>(
-                        <Row className="justify-content-center">
+                        <Grid gridGap={"30px"} templateColumns={"repeat(4,1fr)"} >
                             {results.map((item, i)=>(
-                                <ProductCard data={item} key={i} />
+                                <ProductSimple element={item} key={i} />
                             ))}
-                        </Row>
+                        </Grid>
                     )}
                 />
     </Box>

@@ -11,6 +11,7 @@ import Cart from '../Pages/Cart'
 import Wishlist from '../Pages/Wishlist'
 import Home from './Home'
 import ProductDetails from '../Pages/ProductDetails'
+import Sample from './Sample'
 
 const AllRoutes = () => {
   return (
@@ -26,6 +27,7 @@ const AllRoutes = () => {
           <Route path="/cart" element={ <Cart/>}></Route>
           <Route path="/wishlist" element={ <Wishlist/>}></Route>
           <Route path="/home" element={ <Home/>}></Route>
+          <Route path="/sample" element={ <Sample/>}></Route>
    </Routes>
   )
 }

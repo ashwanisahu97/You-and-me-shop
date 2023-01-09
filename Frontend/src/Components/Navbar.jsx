@@ -10,7 +10,7 @@ import {
   DrawerCloseButton,
 } from '@chakra-ui/react'
 import { Link, useNavigate } from 'react-router-dom'
-import { AiOutlineSearch } from "react-icons/ai"
+
 import { BsCartFill} from "react-icons/bs"
 import { AiOutlineHeart } from "react-icons/ai"
 import { useDispatch, useSelector } from 'react-redux'
@@ -20,6 +20,7 @@ const Navbar = () => {
   // const { isOpen, onOpen, onClose } = useDisclosure();
   const navigate = useNavigate();
   const dispatch = useDispatch();
+  const [searchInput, setSearchInput] = useState("");
   const { isOpen, onOpen, onClose } = useDisclosure()
   const btnRef = React.useRef()
   const cartData=useSelector((store)=>store.cart.cart)
@@ -34,10 +35,7 @@ const Navbar = () => {
           <Box><Link to="/women">Women</Link></Box>
           <Box><Link to="/electronics">Electronics</Link></Box>
           <Box><Link to="/jewelery">Jewelery</Link></Box>
-      <Flex alignItems={"center"}>
-        <Box position={"relative"} left={ "30px"}><AiOutlineSearch size={ "30px"} /></Box>
-        <Input fontSize={"xl"} pl={ "30px"} type={"text"} placeholder={`What are you looking for`} w={ "300px"}></Input>
-      </Flex>
+     
       <Flex alignItems={"center"} gap={ "5"} position={"absolute"} right={ "50px"}>
           <Box><Link to="/login">Login</Link></Box>
         <Box><Link to="/signup">Signup</Link></Box>
