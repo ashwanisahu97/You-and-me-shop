@@ -19,10 +19,10 @@ const Homepage = () => {
   console.log("products",products)
   return (
     <Box>
-      <Flex zIndex={"20"} pt="30px" border={"2px solid green"} ml="600px" alignItems="center">
- <Flex>
-      <Box pt="7px" position={"fixed"}  zIndex={"10"}><AiOutlineSearch size={ "30px"} /></Box>
-          <Input position={"fixed"} border={"1px solid red"} zIndex={"10"} value={searchInput} onChange={(e) => setSearchInput(e.target.value)} fontSize={"xl"} pl={"30px"} type={"text"} placeholder={`What are you looking for`} w={"300px"}></Input>
+      <Flex h={"50px"} zIndex={"20"}  justifyContent="center" alignItems="center">
+ <Flex w="350px">
+      <Box  pt="7px" position={"fixed"} w="50px"  zIndex={"10"}><AiOutlineSearch w="50px" size={ "30px"} /></Box>
+          <Input pl="35px" border="1px solid purple" position={"fixed"} border={"1px solid red"} zIndex={"10"} value={searchInput} onChange={(e) => setSearchInput(e.target.value)} fontSize={"xl"}  type={"text"} placeholder={`What are you looking for`} w={"300px"}></Input>
           </Flex>
           </Flex>
     <Box position={"absolute"} top={"100px"} >
