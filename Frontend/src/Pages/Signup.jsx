@@ -1,4 +1,4 @@
-import { Box, Button, Checkbox, Flex, FormControl, FormLabel, HStack, Heading, Input, Link, Text, VStack } from '@chakra-ui/react'
+import { Box, Button, Checkbox, Flex, FormControl, FormLabel, HStack, Heading, Input, Link, Stack, Text, VStack } from '@chakra-ui/react'
 import React from 'react'
 
 const Signup = () => {
@@ -15,9 +15,6 @@ const Signup = () => {
           <Heading fontSize={'4xl'} textAlign={'center'}>
             Sign up
           </Heading>
-          <Text fontSize={'lg'} color={'gray.600'}>
-            to enjoy all of our cool features ✌️
-          </Text>
         </Stack>
         <Box
           rounded={'lg'}
@@ -62,10 +59,10 @@ const Signup = () => {
               <Button
                 loadingText="Submitting"
                 size="lg"
-                bg={'blue.400'}
+                bg={'teal.400'}
                 color={'white'}
                 _hover={{
-                  bg: 'blue.500',
+                  bg: 'blue.400',
                 }}>
                 Sign up
               </Button>
