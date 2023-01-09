@@ -71,9 +71,8 @@ const ProductDetails = () => {
          <Box><BsCartFill/></Box> 
           <Text> Add To Cart </Text>
         </Flex>
-        <Flex onClick={() => {
-        }} backgroundColor={"teal"} _hover={{cursor:"pointer",bg:"red"}} color="white" gap="10px" justifyContent="center" borderRadius="10px" border="1px solid green" alignItems="center" fontSize={"2xl"}  w={"45%"}>
-          <Box ref={btnRef} color='red' onClick={onOpen}><AiOutlineHeart/></Box>
+        <Flex ref={btnRef} onClick={onOpen} backgroundColor={"teal"} _hover={{cursor:"pointer",bg:"red"}} color="white" gap="10px" justifyContent="center" borderRadius="10px" border="1px solid green" alignItems="center" fontSize={"2xl"}  w={"45%"}>
+          <Box><AiOutlineHeart/></Box>
           <Text> Add To Wishlist </Text>
         </Flex>
       </Flex>
