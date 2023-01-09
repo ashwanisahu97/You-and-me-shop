@@ -43,7 +43,7 @@ const Men = () => {
   console.log("sort value", sort);
   return (
    <Box>
-    <Flex zIndex={"20"} pt="30px" border={"2px solid green"} ml="600px" alignItems="center">
+    <Flex zIndex={"20"} pt="30px" border={"2px solid green"} justifyContent="center" alignItems="center">
  <Flex>
           <Box pt="7px" position={"fixed"} zIndex={"10"}>
             <Select fontSize={"20px"} onChange={sortbyPrice}>
