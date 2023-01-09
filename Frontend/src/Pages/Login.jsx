@@ -17,7 +17,7 @@ const Login = () => {
           <Input type="password" isRequired/>
           </FormControl>
           <Flex mt="10px" justifyContent={"space-between"}>
-          <Checkbox defaultChecked>Remember me</Checkbox>
+          <Checkbox>Remember me</Checkbox>
              <Button>Forgot your password?</Button>
           </Flex>
           <Button  mt="20px" type={ "submit"}

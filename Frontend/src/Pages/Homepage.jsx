@@ -18,7 +18,7 @@ const Homepage = () => {
   }, [dispatch,products?.length])
   console.log("products",products)
   return (
-    <Box>
+    <Box w="100%">
       <Flex h={"50px"} zIndex={"20"}  justifyContent="center" alignItems="center">
  <Flex w="350px">
       <Box  pt="7px" position={"fixed"} w="50px"  zIndex={"10"}><AiOutlineSearch w="50px" size={ "30px"} /></Box>

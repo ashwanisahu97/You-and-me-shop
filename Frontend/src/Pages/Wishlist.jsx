@@ -14,7 +14,7 @@ function Wishlist({ isOpen, onOpen, onClose,btnRef}) {
  
 
   return (
-    < Box position={"relative"} top={ "100px"}>
+    < Box Box w="100%" position={"relative"} top={ "100px"}>
       <Button ref={btnRef} colorScheme='teal' onClick={onOpen}>
         Open
       </Button>
