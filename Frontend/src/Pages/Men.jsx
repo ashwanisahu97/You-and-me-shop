@@ -14,17 +14,37 @@ const Men = () => {
   const products=useSelector((store)=>store.product.data)
   const error=useSelector((store)=>store.product.error)
   useEffect(() => { 
-    dispatch(fetchData())
+    if (products.length === 0) {
+      console.log("upper useEffect")
+      dispatch(fetchData())
+    }
   }, [])
 
   useEffect(() => { 
-    const mensWear = products?.filter((element) => { 
-      return element.category == "mens";
-    })
-    console.log("mensWear",mensWear)
-    setMensData(mensWear)
-  }, [products.length])
-  useEffect(() => { },[])
+    if (products) {
+      const mensWear = products?.filter((element) => {
+        return element.category === "mens";
+      })
+      console.log("mensWear", mensWear)
+      setMensData(mensWear)
+    }
+  }, [])
+  // useEffect(() => {
+  //   if (mensData) {
+  //     let sortData = [...mensData]
+  //     if (sort === "lth") {
+  //       sortData = mensData.sort((a, b) => {
+  //         return b.price - a.price;
+  //       })
+  //     } else if(sort === "htl") {
+  //       sortData = mensData.sort((a, b) => {
+  //         return a.price - b.price;
+  //       }
+  //       )
+  //     }
+  //     setMensData(sortData);
+  //   }
+  //  },[])
   console.log("sort value", sort);
   return (
    <Box>
