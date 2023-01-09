@@ -25,6 +25,19 @@ const Men = () => {
   },[products.length])
   
   return (
+   <Box>
+    <Flex zIndex={"20"} pt="30px" border={"2px solid green"} ml="600px" alignItems="center">
+ <Flex>
+          <Box pt="7px" position={"fixed"} zIndex={"10"}>
+            <Select onChange={ (e)=>setSort(e.target.value)}>
+              <Option></Option>
+              <Option></Option>
+              <Option></Option>
+            </Select>
+      </Box>
+          <Input position={"fixed"} border={"1px solid red"} zIndex={"10"} value={searchInput} onChange={(e) => setSearchInput(e.target.value)} fontSize={"xl"} pl={"30px"} type={"text"} placeholder={`What are you looking for`} w={"300px"}></Input>
+          </Flex>
+          </Flex>
     <Grid gridGap={"30px"} templateColumns={"repeat(4,1fr)"} position={"relative"} top={"100px"}>
     {
       loading ? <Text w={"200px"} mx="auto" color="red">Data is loading </Text> : error ? <Text color="red" mx={"auto"}>Something went wrong,please try again</Text> :
@@ -34,7 +47,8 @@ const Men = () => {
           )
         })
     }
-    </Grid>
+      </Grid>
+      </Box>
   )
 }
 
