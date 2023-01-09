@@ -25,7 +25,16 @@ const Electronics = () => {
   },[products.length])
   
   return (
-    <ProductSimple data={electronicsData} loading={loading} error={error} />
+    <Grid gridGap={"30px"} templateColumns={"repeat(4,1fr)"} position={"relative"} top={"100px"}>
+    {
+      loading ? <Text w={"200px"} mx="auto" color="red">Data is loading </Text> : error ? <Text color="red" mx={"auto"}>Something went wrong,please try again</Text> :
+        electronicsData?.map((element) => {
+          return (
+            <ProductSimple element={element} key={ element.id} />
+          )
+        })
+    }
+    </Grid>
   )
   
 }
