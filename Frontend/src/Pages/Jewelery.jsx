@@ -29,13 +29,13 @@ const Jewelery = () => {
   const sortbyPrice = (e) => { 
     let sortValue = e.target.value;
     console.log(sortValue);
-    let temp = [...mensData];
+    let temp = [...jeweleryData];
     if (sortValue === "lth") {
       temp.sort((a,b)=>a.price-b.price);
     } else { 
       temp.sort((a,b)=>b.price-a.price)
     }
-    setMensData(temp);
+    setjeweleryData(temp);
   }
   
   return (
@@ -43,7 +43,7 @@ const Jewelery = () => {
        <Flex zIndex={"20"} pt="50px" justifyContent="center" alignItems="center">
           <Box pt="7px" position={"fixed"} zIndex={"10"}>
             <Select fontSize={"22px"} onChange={sortbyPrice}>
-              <option>Select by price</option>
+              <option>Sort by price</option>
               <option value="lth">low to high</option>
               <option value="htl">high to low</option>
             </Select>

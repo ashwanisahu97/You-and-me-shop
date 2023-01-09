@@ -46,7 +46,7 @@ const Men = () => {
     <Flex zIndex={"20"} pt="50px" justifyContent="center" alignItems="center">
           <Box pt="7px" position={"fixed"} zIndex={"10"}>
             <Select fontSize={"22px"} onChange={sortbyPrice}>
-              <option>Select by price</option>
+              <option>Sort by price</option>
               <option value="lth">low to high</option>
               <option value="htl">high to low</option>
             </Select>
