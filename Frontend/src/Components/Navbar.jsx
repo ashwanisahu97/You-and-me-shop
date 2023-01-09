@@ -63,7 +63,7 @@ const Navbar = () => {
                 {
                   cartData?.map((e) => {
                     return (
-                      <Box boxShadow="rgba(0, 0, 0, 0.1) 0px 10px 50px" boxSizing='border-box'  mb="20px">
+                      <Box key={ e.id} boxShadow="rgba(0, 0, 0, 0.1) 0px 10px 50px" boxSizing='border-box'  mb="20px">
                       <Flex borderRadius={"10px"}  gap="3" p="5px" boxSizing='border-box' mb='5px'>
                       <Box w="50%" h="110px">
                       <Image w="100%" h="100%" src={ e.image}></Image>

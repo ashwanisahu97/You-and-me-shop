@@ -4,6 +4,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { fetchData } from '../Redux/Product/action';
 import { useNavigate } from 'react-router-dom';
 import ProductSimple from '../Components/ProductSimple';
+import { Grid, Text } from '@chakra-ui/react';
 
 const Men = () => {
   const dispatch = useDispatch();
@@ -24,7 +25,16 @@ const Men = () => {
   },[products.length])
   
   return (
-    <ProductSimple data={mensData} loading={loading} error={error} />
+    <Grid gridGap={"30px"} templateColumns={"repeat(4,1fr)"} position={"relative"} top={"100px"}>
+    {
+      loading ? <Text w={"200px"} mx="auto" color="red">Data is loading </Text> : error ? <Text color="red" mx={"auto"}>Something went wrong,please try again</Text> :
+        mensData?.map((element) => {
+          return (
+            <ProductSimple element={element} key={ element.id} />
+          )
+        })
+    }
+    </Grid>
   )
 }
 
