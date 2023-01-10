@@ -55,7 +55,7 @@ export const getFromWishlistRequest = () => {
         dispatch(getFromWishlistRequest())
         axios.get("http://localhost:8080/wishlist").then(({ data }) => {
             alert("fetched data from wishlist")
-            dispatch(getFromWishlistSuccess())
+            dispatch(getFromWishlistSuccess(data))
         }).catch((error) => {
             console.log("error", error);
             dispatch(getFromWishlistFailure())
