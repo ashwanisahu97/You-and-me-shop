@@ -16,17 +16,19 @@ import { AiOutlineHeart } from "react-icons/ai"
 import { useDispatch, useSelector } from 'react-redux'
 import { getFromCart } from '../Redux/Cart/action'
 import Wishlist from '../Pages/Wishlist'
+import { addToWishlist } from '../Redux/Wishlist/action'
 const WishlistDrawer = ({ isOpen, onOpen, onClose,btnRef}) => {
-  // const { isOpen, onOpen, onClose } = useDisclosure();
+
   const navigate = useNavigate();
   const dispatch = useDispatch();
   const [searchInput, setSearchInput] = useState("");
-//   const { isOpen, onOpen, onClose } = useDisclosure()
-//   const btnRef = React.useRef()
   const cartData=useSelector((store)=>store.cart.cart)
   useEffect(() => { 
   dispatch(getFromCart())
   }, [])
+  const handleAdd = () => { 
+    dispatch(addToWishlist())
+  }
   console.log("cart data", cartData);
   return (
     <Drawer
@@ -63,7 +65,7 @@ const WishlistDrawer = ({ isOpen, onOpen, onClose,btnRef}) => {
          <Box><BsCartFill/></Box> 
         </Flex>
         <Flex onClick={() => {
-          navigate("/wishlist")
+               handleAdd()
         }} backgroundColor={"teal"} _hover={{cursor:"pointer",bg:"red"}} color="white" gap="2px" justifyContent="center" borderRadius="10px" border="1px solid green" alignItems="center" fontSize={"xl"}  w={"60%"}>
           <Text>Remove From</Text>
           <Box><AiOutlineHeart/></Box>
