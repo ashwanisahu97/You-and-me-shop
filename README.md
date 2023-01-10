@@ -54,7 +54,7 @@ Deployment link:- https://you-and-me-shop.vercel.app/
 
 ## Feedback:
 
-If you want to suggest me anything or want to give me feedback then please connect us at:
+If you want to suggest me anything or want to give me feedback then please connect me at:
 
 ashsahu627@gmail.com
 
