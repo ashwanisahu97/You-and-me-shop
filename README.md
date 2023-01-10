@@ -11,7 +11,7 @@ This is the online shop  . I have cloned this mini food app using HTML, CSS and 
 ### Home Page
 
 <p>It contains Navigation bar with different categories. Also footer which provides some information about the company and links to social media handles. Also it shows images of some latest products.</p>
-<img src="./public/Homepage.png" />
+<img src="./Frontend/public/Homepage.png" />
 
 ## Signup and Login 
 
