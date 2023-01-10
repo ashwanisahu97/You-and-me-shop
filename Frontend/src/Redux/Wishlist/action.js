@@ -50,12 +50,13 @@ export const getFromWishlistFailure = () => {
     }
 }
 
-    export const getFromWishlist = () => (dispatch) => { 
-    dispatch(getFromWishlistRequest())
-    axios.get("http://localhost:8080/wishlist").then(({ data}) => { 
-        alert("fetched data from wishlist")
-        dispatch(getFromWishlistSuccess())
-    }).catch((error) => { 
-        console.log("error", error);
-    })
-}
+    export const getFromWishlist = () => (dispatch) => {
+        dispatch(getFromWishlistRequest())
+        axios.get("http://localhost:8080/wishlist").then(({ data }) => {
+            alert("fetched data from wishlist")
+            dispatch(getFromWishlistSuccess())
+        }).catch((error) => {
+            console.log("error", error);
+            dispatch(getFromWishlistFailure())
+        })
+    }
