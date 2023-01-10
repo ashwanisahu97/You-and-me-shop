@@ -14,6 +14,7 @@ const Men = () => {
   const products=useSelector((store)=>store.product.data)
   const error=useSelector((store)=>store.product.error)
   useEffect(() => { 
+    console.log("hello i am from men")
     if (products.length === 0) {
       console.log("upper useEffect")
       dispatch(fetchData())
@@ -42,7 +43,7 @@ const Men = () => {
   }
   console.log("sort value", sort);
   return (
-   <Box Box w="100%">
+   <Box w="100%">
     <Flex zIndex={"20"} pt="50px" justifyContent="center" alignItems="center">
           <Box pt="7px" position={"fixed"} zIndex={"10"}>
             <Select fontSize={"16px"} onChange={sortbyPrice}>

@@ -11,6 +11,7 @@ const Homepage = () => {
   const error=useSelector((store)=>store.product.error)
   const [searchInput, setSearchInput] = useState('');
   useEffect(() => { 
+    console.log("hello i am from homepage")
     if (products?.length == 0) { 
       console.log("fetching data")
       dispatch(fetchData())

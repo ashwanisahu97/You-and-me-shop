@@ -16,18 +16,12 @@ import { AiOutlineHeart } from "react-icons/ai"
 import { useDispatch, useSelector } from 'react-redux'
 import { getFromCart } from '../Redux/Cart/action'
 import Wishlist from '../Pages/Wishlist'
+import WishlistDrawer from './WishlistDrawer'
 const Navbar = () => {
-  // const { isOpen, onOpen, onClose } = useDisclosure();
   const navigate = useNavigate();
   const dispatch = useDispatch();
-  const [searchInput, setSearchInput] = useState("");
   const { isOpen, onOpen, onClose } = useDisclosure()
   const btnRef = React.useRef()
-  const cartData=useSelector((store)=>store.cart.cart)
-  useEffect(() => { 
-  dispatch(getFromCart())
-  }, [])
-  console.log("cart data", cartData);
   return (
     <Flex fontFamily={`Whitney, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif`} fontSize={"16px"} color={ "#282c3f"} fontWeight="500" lineHeight="80px" position="fixed" zIndex={"1"} gap="30px" alignItems={"center"} bg="#f7f8f7" w={"100%"}>
           <Link to={"/"}><Image w={ "100"} h="100" src="https://i.pinimg.com/originals/ce/56/99/ce5699233cbc0f142250b520d967dff7.png"></Image></Link>
@@ -45,60 +39,8 @@ const Navbar = () => {
         <Box> <Box ref={btnRef} color='red' onClick={onOpen}>
         <AiOutlineHeart fontSize={"30px"}/>
         </Box>
-          <Drawer
-            w="400px"
-        isOpen={isOpen}
-        placement='right'
-        onClose={onClose}
-        finalFocusRef={btnRef}
-      >
-        <DrawerOverlay />
-        <DrawerContent>
-          <DrawerCloseButton />
-          <DrawerHeader>Your Wishlist</DrawerHeader>
-
-              <DrawerBody>
-                {
-                  cartData?.map((e) => {
-                    return (
-                      <Box key={ e.id} boxShadow="rgba(0, 0, 0, 0.1) 0px 10px 50px" boxSizing='border-box'  mb="20px">
-                      <Flex borderRadius={"10px"}  gap="3" p="5px" boxSizing='border-box' mb='5px'>
-                      <Box w="50%" h="110px">
-                      <Image w="100%" h="100%" src={ e.image}></Image>
-                        </Box>
-                        <Box w="50%">
-                          <Text fontWeight={"bold"} overflow={"hidden"} h="50px">{ e.title}</Text>
-                          <Text fontSize={"lg"}>Price:${ e.price}</Text>
-                        </Box>
-                        </Flex>
-                        <Flex h="30px" justifyContent={"space-between"}>
-        <Flex onClick={() => {
-          navigate("/cart")
-        }} backgroundColor={"teal"} _hover={{cursor:"pointer",bg:"red"}} color="white" gap="2px" justifyContent="center" borderRadius="10px" alignItems="center" fontSize={"xl"}  w={"36%"}>
-          <Text> Add To</Text>
-         <Box><BsCartFill/></Box> 
-        </Flex>
-        <Flex onClick={() => {
-          navigate("/wishlist")
-        }} backgroundColor={"teal"} _hover={{cursor:"pointer",bg:"red"}} color="white" gap="2px" justifyContent="center" borderRadius="10px" border="1px solid green" alignItems="center" fontSize={"xl"}  w={"60%"}>
-          <Text>Remove From</Text>
-          <Box><AiOutlineHeart/></Box>
-        </Flex>
-      </Flex>
-                      </Box>
-                    )
-                  })
-                }
-          </DrawerBody>
-
-          <DrawerFooter>
-            <Button colorScheme='blue' variant='primary' mr={3} onClick={onClose}>
-              Cancel
-            </Button>
-            {/* <Button colorScheme='blue'>Save</Button> */}
-          </DrawerFooter>
-        </DrawerContent>
-      </Drawer></Box>
+        <WishlistDrawer isOpen={isOpen} onOpen={onOpen} onClose={onClose} btnRef={ btnRef} />
+          </Box>
       </Flex>
    </Flex>
   )
