@@ -1,10 +1,10 @@
 # You-and-me shop
 
-<p>You-and-me shop is an online store.where custor can purchase clothes,electronics and jewelery as well</p>
+<p>You-and-me shop is an online store.where anyone can purchase any clothes,electronics and jeweleries product from here</p>
 
 ## About this project.
 
-<p>This project is built by me only.All feature,styling and designing implemented by my own</p>
+<p>This project is built by me only.All designing, feature and styling implemented by my own</p>
 Deployment link:- https://you-and-me-shop.vercel.app/
 
 ## Team of 1 Member.
@@ -15,24 +15,24 @@ Deployment link:- https://you-and-me-shop.vercel.app/
 
 ### Home Page
 
-<p>It contains Navigation bar with different categories. Also footer which provides some information about the company and links to social media handles. Also it shows images of some latest products.</p>
+<p>It contains Navigation bar with different categories. Also it shows images of some latest products.</p>
 <img src="./Frontend/public/Homepage.png" />
 
 ## Signup and Login 
 
-<p>On this page, user can signup and after successfully signingup he can login.</p>
+<p>On this page, user can signup and after successfully signin up he can login.</p>
 <img src="./Frontend/public/Signup.png" />
 <img src="./Frontend/public/Login.png"/>
 
 
 ### Product detail page
 
-<p>On clicking any of the product it will redirect to the products page which shows detail information of the product along with button such as add to Bag.</p>
+<p>On clicking any of the product it will redirect to the product Details page which shows detailed information of the product along with button such as add to Cart.</p>
 <img src="./Frontend/public/ProductDetails.png" />
 
 ### Wishlist
 
-<p>This page shows the products which customer add to the bag from product page. From here customer can also remove it from the Bag.</p>
+<p>on Clicking wishlist icon or add to wishlist this drawer opens.user can delete from here itself or either they can add to the Cart as well</p>
 <img src="./Frontend/public/Wishlist.png" />
 
 ### Cart page
