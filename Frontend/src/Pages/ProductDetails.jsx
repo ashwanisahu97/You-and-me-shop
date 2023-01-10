@@ -14,6 +14,7 @@ import { addToCart } from '../Redux/Cart/action';
 import {BsCartFill} from "react-icons/bs"
 import { AiFillStar, AiOutlineHeart } from "react-icons/ai"
 import WishlistDrawer from '../Components/WishlistDrawer';
+import { addToWishlist } from '../Redux/Wishlist/action';
 const ProductDetails = () => {
   const dispatch = useDispatch();
   const navigate = useNavigate();
@@ -33,6 +34,11 @@ const ProductDetails = () => {
   const handleAdd = () => { 
     dispatch(addToCart(singleProduct)).then(() => { 
       navigate("/cart")
+    })
+  }
+  const handleAddToWishlist = () => {
+    dispatch(addToWishlist(singleProduct)).then(() => { 
+      onOpen();
     })
   }
   console.log("single product",singleProduct)
@@ -71,7 +77,11 @@ const ProductDetails = () => {
          <Box><BsCartFill/></Box> 
           <Text> Add To Cart </Text>
         </Flex>
-        <Flex ref={btnRef} onClick={onOpen} backgroundColor={"teal"} _hover={{cursor:"pointer",bg:"red"}} color="white" gap="10px" justifyContent="center" borderRadius="10px" border="1px solid green" alignItems="center" fontSize={"2xl"}  w={"45%"}>
+        <Flex ref={btnRef} onClick={() => {
+           handleAddToWishlist()
+        }
+         
+          } backgroundColor={"teal"} _hover={{ cursor: "pointer", bg: "red" }} color="white" gap="10px" justifyContent="center" borderRadius="10px" border="1px solid green" alignItems="center" fontSize={"2xl"} w={"45%"}>
           <Box><AiOutlineHeart/></Box>
           <Text> Add To Wishlist </Text>
         </Flex>

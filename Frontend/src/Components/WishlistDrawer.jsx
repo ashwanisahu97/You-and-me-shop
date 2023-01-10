@@ -17,7 +17,7 @@ import { useDispatch, useSelector } from 'react-redux'
 import { getFromCart } from '../Redux/Cart/action'
 import Wishlist from '../Pages/Wishlist'
 import { addToWishlist } from '../Redux/Wishlist/action'
-const WishlistDrawer = ({ isOpen, onOpen, onClose,btnRef}) => {
+const WishlistDrawer = ({ isOpen, onOpen, onClose,btnRef,product}) => {
 
   const navigate = useNavigate();
   const dispatch = useDispatch();

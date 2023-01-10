@@ -17,7 +17,32 @@ export const addToWishlistFailure = () => {
     }
 }
 
-export const addToWishlist = (prouct) => () => { 
+export const addToWishlist = (product) => () => { 
+    axios.get("http://localhost:8080/wishlist", product).then(() => { 
+        alert("product added to wishlist")
+    }).catch((error) => { 
+        console.log("error", error);
+    })
+}
+
+export const getToWishlistRequest = () => { 
+    return {
+        type:Types.GET_TO_WISHLIST_REQUEST
+    }
+}
+export const getToWishlistSuccess = (payload) => { 
+    return {
+        type: Types.GET_TO_WISHLIST_SUCCESS,
+        payload
+    }
+}
+export const getToWishlistFailure = () => { 
+    return {
+        type:Types.GET_TO_WISHLIST_FAILURE
+    }
+}
+
+export const getToWishlist = (product) => () => { 
     axios.get("http://localhost:8080/wishlist", product).then(() => { 
         alert("product added to wishlist")
     }).catch((error) => { 
