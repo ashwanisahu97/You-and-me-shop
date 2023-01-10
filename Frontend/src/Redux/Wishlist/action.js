@@ -17,6 +17,10 @@ export const addToWishlistFailure = () => {
     }
 }
 
-export const addToWishlist = () => () => { 
-      axios.get("/")
+export const addToWishlist = (prouct) => () => { 
+    axios.get("http://localhost:8080/wishlist", product).then(() => { 
+        alert("product added to wishlist")
+    }).catch((error) => { 
+        console.log("error", error);
+    })
 }
