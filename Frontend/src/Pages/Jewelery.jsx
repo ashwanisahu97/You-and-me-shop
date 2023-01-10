@@ -39,7 +39,7 @@ const Jewelery = () => {
   }
   
   return (
-    <Box Box w="100%">
+    <Box w="100%">
        <Flex zIndex={"20"} pt="50px" justifyContent="center" alignItems="center">
           <Box pt="7px" position={"fixed"} zIndex={"10"}>
             <Select  fontSize={"16px"} onChange={sortbyPrice}>
