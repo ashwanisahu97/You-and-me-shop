@@ -18,17 +18,17 @@ const Homepage = () => {
   }, [dispatch,products?.length])
   console.log("products",products)
   return (
-    <Box w="100%">
+    <Box boxSizing='border-box' border={"1px solid green"} w="100%">
       <Flex h={"50px"} zIndex={"20"}  justifyContent="center" alignItems="center">
- <Flex w="350px">
+ <Flex w="300px">
       <Box  pt="7px" position={"fixed"} w="50px"  zIndex={"10"}><AiOutlineSearch w="50px" size={ "30px"} /></Box>
-          <Input  pl="35px" position={"fixed"}  zIndex={"10"} value={searchInput} onChange={(e) => setSearchInput(e.target.value)} color="#696e79" fontSize={"20px"} fontheight="24px" fontWeight="400" type={"text"} placeholder={`What are you looking for`} w={"300px"}></Input>
+          <Input  pl="35px" position={"fixed"}  zIndex={"10"} value={searchInput} onChange={(e) => setSearchInput(e.target.value)} color="#696e79" fontSize={"14px"} fontheight="24px" fontWeight="400" type={"text"} placeholder={`What are you looking for`} w={"300px"}></Input>
           </Flex>
           </Flex>
     <Box position={"absolute"} top={"100px"} >
         {
           loading ? <Text w={"200px"} mx="auto" color="red">Data is loading </Text> : error ? <Text color="red" mx={"auto"}>Something went wrong,please try again</Text> :
-            <Grid gridGap={"30px"} templateColumns={"repeat(5,1fr)"} >
+            <Grid templateColumns={"repeat(4,1fr)"} >
               {
                 products.map((item, i) => (
                   <ProductSimple element={item} key={i} />
