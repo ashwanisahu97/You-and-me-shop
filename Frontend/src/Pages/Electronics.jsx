@@ -47,7 +47,7 @@ const Electronics = () => {
             </Select>
       </Box>
           </Flex>
-    <Grid gridGap={"30px"} templateColumns={"repeat(5,1fr)"} position={"relative"} top={"100px"}>
+    <Grid templateColumns={"repeat(4,1fr)"} position={"relative"} top={"100px"}>
     {
       loading ? <Text w={"200px"} mx="auto" color="red">Data is loading </Text> : error ? <Text color="red" mx={"auto"}>Something went wrong,please try again</Text> :
         electronicsData?.map((element) => {
