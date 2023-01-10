@@ -24,7 +24,7 @@ const WishlistDrawer = ({ isOpen, onOpen, onClose,btnRef,product}) => {
   const [searchInput, setSearchInput] = useState("");
   const cartData=useSelector((store)=>store.cart.cart)
   useEffect(() => { 
-  dispatch(getFromCart())
+  dispatch(getFromWishlist())
   }, [])
   const handleAdd = () => { 
     dispatch(addToWishlist())
