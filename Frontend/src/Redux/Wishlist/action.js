@@ -38,6 +38,7 @@ export const getFromWishlistRequest = () => {
         type: Types.GET_FROM_WISHLIST_REQUEST
     
     }
+}
     export const getFromWishlistSuccess = (payload) => {
         return {
             type: Types.GET_FROM_WISHLIST_SUCCESS,
@@ -61,4 +62,3 @@ export const getFromWishlistRequest = () => {
         })
     }
 
-    
