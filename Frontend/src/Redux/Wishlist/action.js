@@ -33,22 +33,22 @@ export const addToWishlist = (product) => (dispatch) => {
 // action and function for getting data from Wishlist
 
 
-export const getFromWishlistRequest = () => { 
+export const getFromWishlistRequest = () => {
     return {
-        type:Types.GET_FROM_WISHLIST_REQUEST
+        type: Types.GET_FROM_WISHLIST_REQUEST
     
-}
-export const getFromWishlistSuccess = (payload) => { 
-    return {
-        type: Types.GET_FROM_WISHLIST_SUCCESS,
-        payload
     }
-}
-export const getFromWishlistFailure = () => { 
-    return {
-        type:Types.GET_FROM_WISHLIST_FAILURE
+    export const getFromWishlistSuccess = (payload) => {
+        return {
+            type: Types.GET_FROM_WISHLIST_SUCCESS,
+            payload
+        }
     }
-}
+    export const getFromWishlistFailure = () => {
+        return {
+            type: Types.GET_FROM_WISHLIST_FAILURE
+        }
+    }
 
     export const getFromWishlist = () => (dispatch) => {
         dispatch(getFromWishlistRequest())
@@ -60,3 +60,4 @@ export const getFromWishlistFailure = () => {
             dispatch(getFromWishlistFailure())
         })
     }
+}
