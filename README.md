@@ -1,6 +1,6 @@
 # You-and-me shop
 
-<p>You-and-me shop is an online store.where anyone can purchase any clothes,electronics and jeweleries product from here</p>
+<p>You-and-me shop is an online store.where anyone can purchase any clothes,electronics and jeweleries products from here</p>
 
 ## About this project.
 
