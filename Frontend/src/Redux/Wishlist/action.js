@@ -23,7 +23,7 @@ export const addToWishlist = (product) => (dispatch) => {
     dispatch(addToWishlistRequest())
     axios.get("http://localhost:8080/wishlist", product).then(() => { 
         alert("product added to wishlist");
-        dispatch(addToWishlistSuccess(data))
+        dispatch(addToWishlistSuccess())
     }).catch((error) => { 
         console.log("error", error);
         dispatch(addToWishlistSuccess())
