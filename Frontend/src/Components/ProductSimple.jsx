@@ -25,9 +25,6 @@ const ProductSimple = ({ element}) => {
                       </Flex>
                   </Flex>
                 </Box>
-               {/* <Box>
-                  <Button onClick={() => { navigate(`/productDetails/${element.id}`)}} _hover={{backgroundColor:"blue",color:"white"}} w={ "100%"} bg={ "red"}>See more details</Button>
-             </Box> */}
               </Box>
             )
 }
