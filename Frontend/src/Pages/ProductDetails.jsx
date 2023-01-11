@@ -42,6 +42,7 @@ const ProductDetails = () => {
     })
   }
   console.log("single product",singleProduct)
+  console.log("products",products)
   return (
     <Box boxShadow="rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px" position={"relative"} top="100px" width="60%" marginX={"auto"} p="5px" borderRadius="10px">
     <Flex>

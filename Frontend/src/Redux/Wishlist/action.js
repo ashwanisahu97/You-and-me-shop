@@ -21,7 +21,7 @@ export const addToWishlistFailure = () => {
 
 export const addToWishlist = (product) => (dispatch) => { 
     dispatch(addToWishlistRequest())
-    axios.get("http://localhost:8080/wishlist", product).then(() => { 
+    return axios.get("http://localhost:8080/wishlist", product).then(() => { 
         alert("product added to wishlist");
         dispatch(addToWishlistSuccess())
     }).catch((error) => { 
@@ -53,7 +53,7 @@ export const getFromWishlistRequest = () => {
 
     export const getFromWishlist = () => (dispatch) => {
         dispatch(getFromWishlistRequest())
-        axios.get("http://localhost:8080/wishlist").then(({ data }) => {
+        return axios.get("http://localhost:8080/wishlist").then(({ data }) => {
             alert("fetched data from wishlist")
             dispatch(getFromWishlistSuccess(data))
         }).catch((error) => {

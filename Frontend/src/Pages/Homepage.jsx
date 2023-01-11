@@ -10,16 +10,17 @@ const Homepage = () => {
   const products=useSelector((store)=>store.product.data)
   const error=useSelector((store)=>store.product.error)
   const [searchInput, setSearchInput] = useState('');
+
   useEffect(() => { 
-    console.log("hello i am from homepage")
     if (products?.length == 0) { 
       console.log("fetching data")
       dispatch(fetchData())
      }
-  }, [dispatch,products?.length])
+  }, [dispatch, products?.length])
+  
   console.log("products",products)
   return (
-    <Box boxSizing='border-box' border={"1px solid green"} w="100%">
+    <Box boxSizing='border-box' w="100%">
       <Flex h={"50px"} zIndex={"20"}  justifyContent="center" alignItems="center">
  <Flex w="300px">
       <Box  pt="7px" position={"fixed"} w="50px"  zIndex={"10"}><AiOutlineSearch w="50px" size={ "30px"} /></Box>
