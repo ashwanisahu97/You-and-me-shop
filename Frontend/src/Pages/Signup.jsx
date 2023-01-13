@@ -16,6 +16,7 @@ import {
 } from '@chakra-ui/react';
 import { useState } from 'react';
 import { ViewIcon, ViewOffIcon } from '@chakra-ui/icons';
+import { validate } from '../Components/validate';
 
 const Signup = () => {
   const [showPassword, setShowPassword] = useState(false);
@@ -26,9 +27,12 @@ const Signup = () => {
     password:""
   }
   const [formValues, setFormValues] = useState(initState);
+  const [formErrors, setFormErrors] = useState({});
+  
   const submitHandle = (e) => { 
-    sign
+    setFormErrors(validate(formValues))
     console.log("formValues", formValues);
+    console.log("formErrors", formErrors);
   }
 
   return (
