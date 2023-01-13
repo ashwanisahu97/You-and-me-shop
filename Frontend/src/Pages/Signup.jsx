@@ -57,18 +57,18 @@ const Signup = () => {
               <Box>
                 <FormControl id="lastName">
                   <FormLabel>Last Name</FormLabel>
-                  <Input type="text" />
+                  <Input type="text" onChange={(e) => setFormValues({...formValues,lastName:e.target.value})}/>
                 </FormControl>
               </Box>
             </HStack>
             <FormControl id="email" isRequired>
               <FormLabel>Email address</FormLabel>
-              <Input type="email" />
+              <Input type="email" onChange={(e) => setFormValues({...formValues,email:e.target.value})}/>
             </FormControl>
             <FormControl id="password" isRequired>
               <FormLabel>Password</FormLabel>
               <InputGroup>
-                <Input type={showPassword ? 'text' : 'password'} />
+                <Input type={showPassword ? 'text' : 'password'} onChange={(e) => setFormValues({...formValues,password:e.target.value})} />
                 <InputRightElement h={'full'}>
                   <Button
                     variant={'ghost'}
