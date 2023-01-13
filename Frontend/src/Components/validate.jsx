@@ -1,7 +1,7 @@
 import { FormErrorMessage } from "@chakra-ui/react"
 
 export const validate = (values) => {
-    const formErrors = {};
+    const FormErrorMessage = {};
     if (values.firstName.length === 0) { 
         FormErrorMessage.firstName="first name is required"
     }

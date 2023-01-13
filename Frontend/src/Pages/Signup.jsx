@@ -26,6 +26,9 @@ const Signup = () => {
     password:""
   }
   const [formValues, setFormValues] = useState(initState);
+  const submitHandle = () => { 
+    console.log("formValues", setFormValues);
+  }
 
   return (
     <Box  boxShadow={'lg'} rounded={'lg'} borderRadius="10px" w={["full", "md"]} mx={"auto"} position="relative" top={'50px'} p={"5px"} >
@@ -82,6 +85,7 @@ const Signup = () => {
             </FormControl>
             <Stack spacing={10} pt={2}>
               <Button
+                  onClick={submitHandle}
                 loadingText="Submitting"
                 size="lg"
                 bg={'teal.400'}

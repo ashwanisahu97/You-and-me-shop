@@ -8,7 +8,6 @@ import Homepage from '../Pages/Homepage'
 import Electronics from '../Pages/Electronics'
 import Jewelery from '../Pages/Jewelery'
 import Cart from '../Pages/Cart'
-import Wishlist from '../Pages/Wishlist'
 import Home from './Home'
 import ProductDetails from '../Pages/ProductDetails'
 import Sample from './Sample'
@@ -26,9 +25,6 @@ const AllRoutes = () => {
           <Route path="/login" element={ <Login/>}></Route>
           <Route path="/signup" element={ <Signup/>}></Route>
           <Route path="/cart" element={ <Cart/>}></Route>
-          <Route path="/wishlist" element={ <WishlistDrawer/>}></Route>
-          {/* <Route path="/home" element={ <Home/>}></Route> */}
-          <Route path="/sample" element={ <Sample/>}></Route>
    </Routes>
   )
 }
