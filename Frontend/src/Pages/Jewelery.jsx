@@ -12,6 +12,7 @@ const Jewelery = () => {
   const loading = useSelector((store) => store.product.loading);
   const products = useSelector((store) => store.product.data);
   const error = useSelector((store) => store.product.error);
+  
   useEffect(() => {
     if (products.length === 0) {
       dispatch(fetchData());

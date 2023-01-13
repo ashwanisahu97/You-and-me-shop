@@ -19,6 +19,14 @@ import { ViewIcon, ViewOffIcon } from '@chakra-ui/icons';
 
 const Signup = () => {
   const [showPassword, setShowPassword] = useState(false);
+  let initState = {
+    firstName: "",
+    lastName: "",
+    email: "",
+    password:""
+  }
+  const [formValues, setFormValues] = useState(initState);
+
   return (
     <Box  boxShadow={'lg'} rounded={'lg'} borderRadius="10px" w={["full", "md"]} mx={"auto"} position="relative" top={'50px'} p={"5px"} >
  
@@ -43,7 +51,7 @@ const Signup = () => {
               <Box>
                 <FormControl id="firstName" isRequired>
                   <FormLabel>First Name</FormLabel>
-                  <Input type="text" />
+                    <Input type="text" onChange={(e) => setFormValues({...formValues,firstName:e.target.value})} />
                 </FormControl>
               </Box>
               <Box>
