@@ -15,7 +15,6 @@ import { BsCartFill} from "react-icons/bs"
 import { AiOutlineHeart } from "react-icons/ai"
 import { useDispatch, useSelector } from 'react-redux'
 import { getFromCart } from '../Redux/Cart/action'
-import Wishlist from '../Pages/Wishlist'
 import { addToWishlist, getFromWishlist } from '../Redux/Wishlist/action'
 const WishlistDrawer = ({ isOpen, onOpen, onClose,btnRef,product}) => {
 

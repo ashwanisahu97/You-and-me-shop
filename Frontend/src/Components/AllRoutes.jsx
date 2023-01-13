@@ -8,9 +8,7 @@ import Homepage from '../Pages/Homepage'
 import Electronics from '../Pages/Electronics'
 import Jewelery from '../Pages/Jewelery'
 import Cart from '../Pages/Cart'
-import Home from './Home'
 import ProductDetails from '../Pages/ProductDetails'
-import Sample from './Sample'
 import WishlistDrawer from './WishlistDrawer'
 
 const AllRoutes = () => {

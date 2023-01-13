@@ -1,6 +1,5 @@
 import axios from "axios";
 import * as Types from "./actionTypes"
-import Wishlist from "../../Pages/Wishlist";
 // action and function for adding data to Wishlist
 export const addToWishlistRequest = () => { 
     return {
