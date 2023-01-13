@@ -29,7 +29,7 @@ const Signup = () => {
 
   return (
     <Box  boxShadow={'lg'} rounded={'lg'} borderRadius="10px" w={["full", "md"]} mx={"auto"} position="relative" top={'50px'} p={"5px"} >
- 
+      { JSON.stringify(formValues)}
         <Flex
       minH={'90vh'}
       align={'center'}
