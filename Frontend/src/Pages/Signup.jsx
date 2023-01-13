@@ -26,8 +26,9 @@ const Signup = () => {
     password:""
   }
   const [formValues, setFormValues] = useState(initState);
-  const submitHandle = () => { 
-    console.log("formValues", setFormValues);
+  const submitHandle = (e) => { 
+    sign
+    console.log("formValues", formValues);
   }
 
   return (
