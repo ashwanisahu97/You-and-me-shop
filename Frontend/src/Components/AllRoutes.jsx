@@ -10,6 +10,8 @@ import Jewelery from '../Pages/Jewelery'
 import Cart from '../Pages/Cart'
 import ProductDetails from '../Pages/ProductDetails'
 import WishlistDrawer from './WishlistDrawer'
+import Home from './Home'
+import CategoryCarousel from './Carousel'
 
 const AllRoutes = () => {
   return (

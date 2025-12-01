@@ -5,6 +5,7 @@ import { fetchData } from "../Redux/Product/action";
 import ProductSimple from "../Components/ProductSimple";
 import { Flex, Grid, Select, Text } from "@chakra-ui/react";
 import { Box } from "@mui/material";
+import Loader from "../Components/Loader";
 
 const Jewelery = () => {
   const dispatch = useDispatch();
@@ -12,7 +13,7 @@ const Jewelery = () => {
   const loading = useSelector((store) => store.product.loading);
   const products = useSelector((store) => store.product.data);
   const error = useSelector((store) => store.product.error);
-  
+
   useEffect(() => {
     if (products.length === 0) {
       dispatch(fetchData());
@@ -41,7 +42,7 @@ const Jewelery = () => {
 
   return (
     <Box w="100%">
-      <Flex zIndex={"20"} pt="50px" justifyContent="center" alignItems="center">
+      <Flex zIndex={"20"} pt="50px" ml="566px" justifyContent="center" alignItems="center">
         <Box pt="7px" position={"fixed"} zIndex={"10"}>
           <Select fontSize={"16px"} onChange={sortbyPrice}>
             <option>Sort by price</option>
@@ -56,9 +57,7 @@ const Jewelery = () => {
         top={"100px"}
       >
         {loading ? (
-          <Text w={"200px"} mx="auto" color="red">
-            Data is loading{" "}
-          </Text>
+          <Loader />
         ) : error ? (
           <Text color="red" mx={"auto"}>
             Something went wrong,please try again

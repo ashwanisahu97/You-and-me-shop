@@ -4,6 +4,7 @@ import { fetchData } from '../Redux/Product/action';
 import ProductSimple from '../Components/ProductSimple';
 import { Box, Flex, Grid ,Input,Text} from '@chakra-ui/react';
 import { AiOutlineSearch } from "react-icons/ai"
+import Loader from '../Components/Loader';
 const Homepage = () => {
   const dispatch = useDispatch();
   const loading=useSelector((store)=>store.product.loading)
@@ -20,7 +21,7 @@ const Homepage = () => {
   
   console.log("products",products)
   return (
-    <Box boxSizing='border-box' w="100%">
+    <Box boxSizing='border-box' w="100%" border={"1px solid red"}>
       <Flex h={"50px"} zIndex={"20"}  justifyContent="center" alignItems="center">
  <Flex w="300px">
       <Box  pt="7px" position={"fixed"} w="50px"  zIndex={"10"}><AiOutlineSearch w="50px" size={ "30px"} /></Box>
@@ -29,7 +30,7 @@ const Homepage = () => {
           </Flex>
     <Box position={"absolute"} top={"100px"} >
         {
-          loading ? <Text w={"200px"} mx="auto" color="red">Data is loading </Text> : error ? <Text color="red" mx={"auto"}>Something went wrong,please try again</Text> :
+          loading ?<Loader/> : error ? <Text color="red" mx={"auto"}>Something went wrong,please try again</Text> :
             <Grid templateColumns={"repeat(4,1fr)"} >
               {
                 products.map((item, i) => (
