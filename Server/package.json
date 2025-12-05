@@ -1,13 +1,11 @@
-
 {
   "name": "server",
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "start": "json-server db.json --port $PORT --watch"
+    "start": "json-server db.json --host 0.0.0.0 --port $PORT --watch"
   },
   "dependencies": {
     "json-server": "^0.17.1"
   }
 }
-
