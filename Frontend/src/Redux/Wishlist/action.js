@@ -8,21 +8,22 @@ export const addToWishlistRequest = () => {
 }
 export const addToWishlistSuccess = (payload) => { 
     return {
-        type: Types.ADD_TO_WISHLIST_REQUEST,
+        type: Types.ADD_TO_WISHLIST_SUCCESS,
         payload
     }
 }
 export const addToWishlistFailure = () => { 
     return {
-        type:Types.ADD_TO_WISHLIST_REQUEST
+        type:Types.ADD_TO_WISHLIST_FAILURE
     }
 }
 
 export const addToWishlist = (product) => (dispatch) => { 
     dispatch(addToWishlistRequest())
-    return axios.get("http://localhost:8080/wishlist", product).then(() => { 
+    return axios.post("https://you-and-me-shop-2.onrender.com/wishlist", product).then(() => { 
         alert("product added to wishlist");
-        dispatch(addToWishlistSuccess())
+        console.log("my add to wishlist product",product)
+        dispatch(addToWishlistSuccess(product))
     }).catch((error) => { 
         console.log("error", error);
         dispatch(addToWishlistSuccess())
@@ -51,10 +52,8 @@ export const getFromWishlistRequest = () => {
     }
 
     export const getFromWishlist = () => (dispatch) => {
-        alert("oye hello")
         dispatch(getFromWishlistRequest())
-        return axios.get("http://localhost:8080/wishlist").then(({ data }) => {
-            alert("fetched data from wishlist")
+        return axios.get("https://you-and-me-shop-2.onrender.com/wishlist").then(({ data }) => {
             console.log("my data",data)
             dispatch(getFromWishlistSuccess(data))
         }).catch((error) => {

@@ -35,7 +35,7 @@ export const getFromCartFailure = () => {
 
 export const getFromCart = () => (dispatch) => { 
         dispatch(getFromCartRequest());
-    axios.get("https://you-and-me-json-server.onrender.com/cart").then(({ data}) => { 
+    axios.get("https://you-and-me-shop-2.onrender.com/cart").then(({ data}) => { 
         console.log("data", data)
         dispatch(getFromCartSuccess(data))
     }).catch(() => { 
@@ -62,7 +62,7 @@ export const deleteFromCartFailure = () => {
 
 export const deleteFromCart = (id) => (dispatch) => { 
         dispatch(deleteFromCartRequest());
-    return axios.delete(`https://you-and-me-json-server.onrender.com/cart/${id}`).then(({ data}) => { 
+    return axios.delete(`https://you-and-me-shop-2.onrender.com/cart/${id}`).then(({ data}) => { 
         console.log("data", data)
         alert("deleted from cart");
         dispatch(deleteFromCartSuccess())
@@ -76,7 +76,7 @@ export const deleteFromCart = (id) => (dispatch) => {
 
 export const addToCart = (prod) => (dispatch) => { 
         dispatch(addToCartRequest());
-    return axios.post("https://you-and-me-json-server.onrender.com/cart",prod).then(({ data}) => { 
+    return axios.post("https://you-and-me-shop-2.onrender.com/cart",prod).then(({ data}) => { 
         alert("data added to a cart");
         addToCartSuccess(data)
     }).catch(() => { 

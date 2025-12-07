@@ -20,7 +20,7 @@ export const getDataFailure = () => {
 export const fetchData = () => async (dispatch) => {
     try {
         dispatch(GetDataRequest());
-        // const response = await fetch("https://you-and-me-json-server.onrender.com/products",{
+        // const response = await fetch("https://you-and-me-shop-2.onrender.com/products",{
         //     method: "GET",
         //     headers: {
         //         "Content-Type": "application/json"
